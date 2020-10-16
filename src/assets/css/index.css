@@ -99,6 +99,7 @@ header nav ul li {
 /* line 25, ../scss/index.scss */
 .focus .flex li::before {
   content: "★\00a0";
+  /* Todo: Review; Unicode for space on list item marker */
 }
 /* line 30, ../scss/index.scss */
 .focus .flex > * {

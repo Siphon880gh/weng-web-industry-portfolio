@@ -23,7 +23,7 @@ header {
     li {
         display: list-item;
         &::before {
-            content: "★\00a0";
+            content: "★\00a0"; /* Todo: Review; Unicode for space on list item marker */
         }
         margin-left: 4ch;
     }
