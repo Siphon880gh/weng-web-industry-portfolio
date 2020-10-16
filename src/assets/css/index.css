@@ -50,6 +50,24 @@
   margin-top: 20px;
 }
 
+/* Utility classes: Different Devices */
+/* line 34, ../scss/_utility-classes.scss */
+.spacer-vertical-small {
+  height: 10px;
+}
+
+@media (max-width: 568px) {
+  /* line 41, ../scss/_utility-classes.scss */
+  .hidden-xs-down {
+    display: none;
+  }
+}
+@media (min-width: 568px) {
+  /* line 46, ../scss/_utility-classes.scss */
+  .hidden-xs-up {
+    display: none;
+  }
+}
 /* Color Theme */
 /* line 4, ../scss/index.scss */
 :root {
@@ -92,4 +110,17 @@ header nav ul li {
 /* line 37, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
+}
+
+/* line 43, ../scss/index.scss */
+.contact > .flex > *:nth-child(1) {
+  flex: 1;
+}
+/* line 46, ../scss/index.scss */
+.contact > .flex > *:nth-child(2) {
+  flex: 2;
+}
+/* line 55, ../scss/index.scss */
+.contact > .flex ul li::marker {
+  content: "";
 }
