@@ -19,3 +19,14 @@ header {
         display: block;
     }
 }
+.focus .flex-row {
+    li {
+        display: list-item;
+        &::before {
+            content: "★\00a0";
+        }
+    }
+    & > * {
+        flex-basis: 50%;
+    }
+}

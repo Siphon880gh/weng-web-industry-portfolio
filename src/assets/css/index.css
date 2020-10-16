@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 1, ../scss/_reset-css.scss */
 * {
   margin: 0;
@@ -53,4 +54,17 @@ header .site-menu {
 /* line 18, ../scss/index.scss */
 header nav ul li {
   display: block;
+}
+
+/* line 23, ../scss/index.scss */
+.focus .flex-row li {
+  display: list-item;
+}
+/* line 25, ../scss/index.scss */
+.focus .flex-row li::before {
+  content: "★\00a0";
+}
+/* line 29, ../scss/index.scss */
+.focus .flex-row > * {
+  flex-basis: 50%;
 }
