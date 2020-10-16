@@ -1,0 +1,30 @@
+/* line 1, ../scss/_reset-css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* line 1, ../scss/_utility-classes.scss */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* line 7, ../scss/_utility-classes.scss */
+.flex-col {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* Color Theme */
+/* line 4, ../scss/index.scss */
+:root {
+  --dark: #21629A;
+  --med: #FFFFFF;
+  --light: #26A4E7;
+}

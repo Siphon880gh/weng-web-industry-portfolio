@@ -1,2 +1,18 @@
-body {
+@import 'reset-css', 'utility-classes';
+
+/* Color Theme */
+:root {
+    --dark: #21629A;
+    --med: #FFFFFF;
+    --light: #26A4E7;
+}
+
+header {
+    .site-title {
+
+    }
+    
+    .site-menu {
+        
+    }
 }
