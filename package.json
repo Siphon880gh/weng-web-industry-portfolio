@@ -5,7 +5,8 @@
   "main": "src/assets/js/app.js",
   "scripts": {
       "watch": "concurrently 'compass watch ./' 'livereload --ignore out/'",
-      "build": "rm -r build; cp -rf src build; rm -r build/assets/scss"
+      "build": "rm -r build; cp -rf src build; rm -r build/assets/scss",
+      "deploy": "git push origin master;"
   },  
   "dependencies": {
       "node-livereload": "^0.6.0",
