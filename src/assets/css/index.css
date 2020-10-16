@@ -41,29 +41,31 @@
 /* Utility classes: Sections */
 /* line 26, ../scss/_utility-classes.scss */
 .section {
+  padding-left: 40px;
+  padding-right: 40px;
   margin-bottom: 20px;
 }
 
-/* line 29, ../scss/_utility-classes.scss */
+/* line 31, ../scss/_utility-classes.scss */
 .section:nth-child(2) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   margin-top: 20px;
 }
 
 /* Utility classes: Different Devices */
-/* line 34, ../scss/_utility-classes.scss */
+/* line 36, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 41, ../scss/_utility-classes.scss */
+  /* line 43, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 46, ../scss/_utility-classes.scss */
+  /* line 48, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
