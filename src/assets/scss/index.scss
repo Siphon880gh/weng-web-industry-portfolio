@@ -7,6 +7,11 @@
     --light: #26A4E7;
 }
 
+/* Responsive Images that will shrink */
+img {
+    width: 100%;
+}
+
 header {
     .site-title {
         flex: 2 25%;
@@ -48,8 +53,6 @@ header {
         flex: 2;
     }
     ul {
-        // width: 50%;
-        // margin: 0 auto;
 
         li {
             margin-bottom: 10px;

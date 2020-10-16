@@ -78,56 +78,63 @@
   --light: #26A4E7;
 }
 
+/* Responsive Images that will shrink */
 /* line 11, ../scss/index.scss */
+img {
+  width: 100%;
+}
+
+/* line 16, ../scss/index.scss */
 header .site-title {
   flex: 2 25%;
 }
-/* line 15, ../scss/index.scss */
+/* line 20, ../scss/index.scss */
 header .site-menu {
   flex: 1 25%;
 }
-/* line 18, ../scss/index.scss */
+/* line 23, ../scss/index.scss */
 header nav ul li {
   display: block;
 }
 
-/* line 23, ../scss/index.scss */
+/* line 28, ../scss/index.scss */
 .focus .flex li {
   display: list-item;
   margin-left: 4ch;
 }
-/* line 25, ../scss/index.scss */
+/* line 30, ../scss/index.scss */
 .focus .flex li::before {
   content: "★\00a0";
+  /* Todo: Review; Unicode for space on list item marker */
 }
-/* line 30, ../scss/index.scss */
+/* line 35, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 35, ../scss/index.scss */
+/* line 40, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 38, ../scss/index.scss */
+/* line 43, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 44, ../scss/index.scss */
+/* line 49, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   flex: 1;
 }
-/* line 47, ../scss/index.scss */
+/* line 52, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 54, ../scss/index.scss */
+/* line 57, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 57, ../scss/index.scss */
+/* line 60, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
