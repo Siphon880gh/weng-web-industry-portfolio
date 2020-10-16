@@ -4,7 +4,7 @@
    <title>Weng's Web Industry</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <link rel="icon" href="/favicon.ico?v=1.1">
+    <link rel="icon" href="assets/img/favicon.ico">
 
     <!-- Internal Assets -->
     <link rel="stylesheet" href="assets/css/index.css">
@@ -16,11 +16,111 @@
 
 </head>
     <body>
-        <div class="container">
-        Empty
-        </div>
-        
+        <header class="flex flex-row flex-space-between">
+            <h1 class="site-title">Weng Web Industry</h1>
+            <nav class="site-menu" role="navigation" aria-label="Menu">
+                <ul class="flex flex-row flex-space-around">
+                    <li><a href="#focus">About Me</a></li>
+                    <li><a href="#tech">Tech</a></li>
+                    <li><a href="#work">Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="focus" class="focus section">
+            <h2 class="section-title">About</h2>
+            <div class="flex flex-row">
+                <img src="assets/img/coding-stock.jpg" alt="Eye catching">
+                <div>
+                    <p>Have a great idea? Contact me to get your idea launched!</p>
+                    <ul>
+                        <li>Idea to technical todo list</li>
+                        <li>Wireframe to mockup</li>
+                        <li>Testing</li>
+                        <li>Finished Product, SEO</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="tech" class="tech section">
+            <h2 class="section-title">Technology</h2>
+            <div class="flex flex-row">
+                <div>
+                    Or just need an in house developer, who can implement features, or fix bugs?
+                    <br/><br/>
+                    Weng can do:
+                </div>
+                <div>
+                    <span>Web</span>
+                    <ul>
+                        <li>Wireframing</li>
+                        <li>UX/UI</li>
+                        <li>Interactive</li>
+                        <li>Great look on mobile / tablet!</li>
+    
+                    </ul>
+                </div>
+                <div>
+                    <span>Servers</span>
+                    <ul>
+                        <li>Database</li>
+                        <li>API</li>
+                    </ul>
+                    <br/>
+                    <span>Latest cutting edge</span>
+                    <ul>
+                        <li>React JS</li>
+                        <li>DevOps</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <main id="work" class="work section">
+            <h2 class="section-title">Work</h2>
+            <div class="flex flex-row">
+                <!-- Site 1 -->
+                <figure>
+                    <img src="http://via.placeholder.com/500x500?text=:)" alt="Placeholder">
+                    <figcaption>
+                        <h3>Placeholder</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </figcaption>
+                </figure>
+
+
+                <!-- Site 2 -->
+                <figure>
+                    <img src="http://via.placeholder.com/500x500?text=:)" alt="Placeholder">
+                    <figcaption>
+                        <h3>Placeholder</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                    </figcaption>
+                </figure>
+            </div>
+        </main>
+
+        <footer id="contact" class="contact section">
+            <h2 class="section-title">Contact</h2>
+            <div class="spacer-vertical-small hidden-xs-up height-10px"></div>
+            <div class="flex flex-row flex-space-between">
+                <h3 class="hidden-xs-down">Contact me! Or see my CV:</h3>
+                <ul class="flex flex-row flex-space-around">
+                    <li><a href="#" target="_blank">a_link</a></li>
+                    <li><a href="#" target="_blank">a_link</a></li>
+                    <li><a href="#" target="_blank">a_link</a></li>
+                    <li><a href="#" target="_blank">a_link</a></li>
+                    <li><a href="#" target="_blank">a_link</a></li>
+                </ul>
+            </div>
+        </footer>
+
         <script src="assets/js/app.js"></script>
-   
     </body>
 </html>

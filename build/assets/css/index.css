@@ -1,0 +1,126 @@
+@charset "UTF-8";
+/* line 1, ../scss/_reset-css.scss */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utility classes: Flex */
+/* line 2, ../scss/_utility-classes.scss */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* line 6, ../scss/_utility-classes.scss */
+.flex-row {
+  flex-direction: row;
+}
+
+/* line 9, ../scss/_utility-classes.scss */
+.flex-col {
+  flex-direction: column;
+}
+
+/* line 12, ../scss/_utility-classes.scss */
+.flex-space-around {
+  justify-content: space-around;
+}
+
+/* line 15, ../scss/_utility-classes.scss */
+.flex-space-between {
+  justify-content: space-between;
+}
+
+/* line 18, ../scss/_utility-classes.scss */
+.flex-justify-middle {
+  justify-content: middle;
+}
+
+/* Utility classes: Sections */
+/* line 26, ../scss/_utility-classes.scss */
+.section {
+  margin-bottom: 20px;
+}
+
+/* line 29, ../scss/_utility-classes.scss */
+.section:nth-child(2) {
+  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
+  margin-top: 20px;
+}
+
+/* Utility classes: Different Devices */
+/* line 34, ../scss/_utility-classes.scss */
+.spacer-vertical-small {
+  height: 10px;
+}
+
+@media (max-width: 568px) {
+  /* line 41, ../scss/_utility-classes.scss */
+  .hidden-xs-down {
+    display: none;
+  }
+}
+@media (min-width: 568px) {
+  /* line 46, ../scss/_utility-classes.scss */
+  .hidden-xs-up {
+    display: none;
+  }
+}
+/* Color Theme */
+/* line 4, ../scss/index.scss */
+:root {
+  --dark: #21629A;
+  --med: #FFFFFF;
+  --light: #26A4E7;
+}
+
+/* line 11, ../scss/index.scss */
+header .site-title {
+  flex: 2 25%;
+}
+/* line 15, ../scss/index.scss */
+header .site-menu {
+  flex: 1 25%;
+}
+/* line 18, ../scss/index.scss */
+header nav ul li {
+  display: block;
+}
+
+/* line 23, ../scss/index.scss */
+.focus .flex li {
+  display: list-item;
+}
+/* line 25, ../scss/index.scss */
+.focus .flex li::before {
+  content: "★\00a0";
+}
+/* line 29, ../scss/index.scss */
+.focus .flex > * {
+  flex-basis: 50%;
+}
+
+/* line 34, ../scss/index.scss */
+.tech .flex > div {
+  flex-basis: 33%;
+  padding: 10px;
+}
+/* line 37, ../scss/index.scss */
+.tech .flex > div li {
+  margin-left: 4ch;
+}
+
+/* line 43, ../scss/index.scss */
+.contact > .flex > *:nth-child(1) {
+  flex: 1;
+}
+/* line 46, ../scss/index.scss */
+.contact > .flex > *:nth-child(2) {
+  flex: 2;
+}
+/* line 55, ../scss/index.scss */
+.contact > .flex ul li::marker {
+  content: "";
+}
