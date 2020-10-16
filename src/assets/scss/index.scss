@@ -25,6 +25,7 @@ header {
         &::before {
             content: "★\00a0";
         }
+        margin-left: 4ch;
     }
     & > * {
         flex-basis: 50%;

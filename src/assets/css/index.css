@@ -94,35 +94,36 @@ header nav ul li {
 /* line 23, ../scss/index.scss */
 .focus .flex li {
   display: list-item;
+  margin-left: 4ch;
 }
 /* line 25, ../scss/index.scss */
 .focus .flex li::before {
   content: "★\00a0";
 }
-/* line 29, ../scss/index.scss */
+/* line 30, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 34, ../scss/index.scss */
+/* line 35, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 37, ../scss/index.scss */
+/* line 38, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 43, ../scss/index.scss */
+/* line 44, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   flex: 1;
 }
-/* line 46, ../scss/index.scss */
+/* line 47, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 55, ../scss/index.scss */
+/* line 56, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
