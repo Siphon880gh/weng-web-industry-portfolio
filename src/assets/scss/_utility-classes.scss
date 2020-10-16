@@ -1,3 +1,4 @@
+/* Utility classes: Flex */
 .flex {
     display: flex;
     flex-wrap: wrap;
@@ -17,6 +18,14 @@
 .flex-justify-middle {
     justify-content: middle;
 }
+
+/* Utility classes: Sections */
 .section-title {
 
+}
+.section {
+    margin-bottom: 20px;
+}
+.section:nth-child(2) { /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
+    margin-top: 20px;
 }

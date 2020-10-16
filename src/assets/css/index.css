@@ -6,35 +6,48 @@
   box-sizing: border-box;
 }
 
-/* line 1, ../scss/_utility-classes.scss */
+/* Utility classes: Flex */
+/* line 2, ../scss/_utility-classes.scss */
 .flex {
   display: flex;
   flex-wrap: wrap;
 }
 
-/* line 5, ../scss/_utility-classes.scss */
+/* line 6, ../scss/_utility-classes.scss */
 .flex-row {
   flex-direction: row;
 }
 
-/* line 8, ../scss/_utility-classes.scss */
+/* line 9, ../scss/_utility-classes.scss */
 .flex-col {
   flex-direction: column;
 }
 
-/* line 11, ../scss/_utility-classes.scss */
+/* line 12, ../scss/_utility-classes.scss */
 .flex-space-around {
   justify-content: space-around;
 }
 
-/* line 14, ../scss/_utility-classes.scss */
+/* line 15, ../scss/_utility-classes.scss */
 .flex-space-between {
   justify-content: space-between;
 }
 
-/* line 17, ../scss/_utility-classes.scss */
+/* line 18, ../scss/_utility-classes.scss */
 .flex-justify-middle {
   justify-content: middle;
+}
+
+/* Utility classes: Sections */
+/* line 26, ../scss/_utility-classes.scss */
+.section {
+  margin-bottom: 20px;
+}
+
+/* line 29, ../scss/_utility-classes.scss */
+.section:nth-child(2) {
+  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
+  margin-top: 20px;
 }
 
 /* Color Theme */
