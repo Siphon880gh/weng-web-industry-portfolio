@@ -68,3 +68,13 @@ header nav ul li {
 .focus .flex-row > * {
   flex-basis: 50%;
 }
+
+/* line 34, ../scss/index.scss */
+.tech .flex-row > div {
+  flex-basis: 33%;
+  padding: 10px;
+}
+/* line 37, ../scss/index.scss */
+.tech .flex-row > div li {
+  margin-left: 4ch;
+}

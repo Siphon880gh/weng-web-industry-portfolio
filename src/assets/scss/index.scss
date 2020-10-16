@@ -30,3 +30,11 @@ header {
         flex-basis: 50%;
     }
 }
+
+.tech .flex-row > div {
+    flex-basis: 33%;
+    padding: 10px;
+    li {
+        margin-left: 4ch;
+    }
+}
