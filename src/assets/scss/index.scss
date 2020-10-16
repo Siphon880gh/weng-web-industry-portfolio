@@ -9,10 +9,13 @@
 
 header {
     .site-title {
-
+        flex: 2 25%;
     }
     
     .site-menu {
-        
+        flex: 1 25%;
+    }
+    nav ul li {
+        display: block;
     }
 }

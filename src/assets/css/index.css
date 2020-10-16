@@ -10,15 +10,28 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
 }
 
-/* line 7, ../scss/_utility-classes.scss */
+/* line 6, ../scss/_utility-classes.scss */
 .flex-col {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: center;
+}
+
+/* line 11, ../scss/_utility-classes.scss */
+.flex-space-around {
+  justify-content: space-around;
+}
+
+/* line 14, ../scss/_utility-classes.scss */
+.flex-space-between {
+  justify-content: space-between;
+}
+
+/* line 17, ../scss/_utility-classes.scss */
+.flex-justify-middle {
+  justify-content: middle;
 }
 
 /* Color Theme */
@@ -27,4 +40,17 @@
   --dark: #21629A;
   --med: #FFFFFF;
   --light: #26A4E7;
+}
+
+/* line 11, ../scss/index.scss */
+header .site-title {
+  flex: 2 25%;
+}
+/* line 15, ../scss/index.scss */
+header .site-menu {
+  flex: 1 25%;
+}
+/* line 18, ../scss/index.scss */
+header nav ul li {
+  display: block;
 }
