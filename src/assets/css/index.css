@@ -7,17 +7,19 @@
 }
 
 /* line 1, ../scss/_utility-classes.scss */
-.flex-row {
+.flex {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
-/* line 6, ../scss/_utility-classes.scss */
-.flex-col {
-  display: flex;
-  flex-wrap: wrap;
+/* line 5, ../scss/_utility-classes.scss */
+.flex-row {
   flex-direction: row;
+}
+
+/* line 8, ../scss/_utility-classes.scss */
+.flex-col {
+  flex-direction: column;
 }
 
 /* line 11, ../scss/_utility-classes.scss */
@@ -57,24 +59,24 @@ header nav ul li {
 }
 
 /* line 23, ../scss/index.scss */
-.focus .flex-row li {
+.focus .flex li {
   display: list-item;
 }
 /* line 25, ../scss/index.scss */
-.focus .flex-row li::before {
+.focus .flex li::before {
   content: "★\00a0";
 }
 /* line 29, ../scss/index.scss */
-.focus .flex-row > * {
+.focus .flex > * {
   flex-basis: 50%;
 }
 
 /* line 34, ../scss/index.scss */
-.tech .flex-row > div {
+.tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
 /* line 37, ../scss/index.scss */
-.tech .flex-row > div li {
+.tech .flex > div li {
   margin-left: 4ch;
 }

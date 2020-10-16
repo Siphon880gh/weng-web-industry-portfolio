@@ -1,12 +1,12 @@
-.flex-row {
+.flex {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
 }
-.flex-col {
-    display: flex;
-    flex-wrap: wrap;
+.flex-row {
     flex-direction: row;
+}
+.flex-col {
+    flex-direction: column;
 }
 .flex-space-around {
     justify-content: space-around;
