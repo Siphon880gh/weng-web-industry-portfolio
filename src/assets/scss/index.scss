@@ -26,6 +26,7 @@ header {
         min-width: 330px;
         // max-width: 500px;
     }
+    border-bottom: 1px solid gray;
 }
 
 /* Section spacing */
@@ -77,9 +78,11 @@ header {
     /* Make header sticky */
     background-color: var(--dark);
     position: sticky;
+    z-index: 3;
     min-height: 55px;
     top: 0;
     padding-right: 15px;
+    padding-bottom: 10px;
 
     .site-title {
         h1 {
@@ -266,6 +269,10 @@ header {
             grid-column-end: span 1 !important;
             grid-row-end: span 1 !important;
         }
+        .flushed-to-grid {
+            grid-column-end: span 1 !important;
+            grid-row-end: fit-content;
+        }
     }
 }
 
@@ -332,6 +339,41 @@ header {
     }
 }
 
+/* Credited section that's a nested section of Work */
+.credited.flushed-to-grid {
+    grid-column-end: span 8;
+    margin-top:20px;
+    width: 100% !important;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: 10px;
+    li {
+
+        &::marker {
+            content: "";
+        }
+
+        details {
+            /* Remove collapse/expand icon for <details> */
+            summary::-webkit-details-marker {
+                display: none;
+            }
+            position: relative;
+            margin-top:5px;
+
+            .fa-info {
+                margin-right: 1ch;
+                cursor: pointer;
+            }
+            a {
+                color: var(--shade);
+            }
+            a:hover {
+                color: var(--med);
+            }
+        }
+    }
+}
 
 /* Contact section flexing */
 .contact > .flex {
