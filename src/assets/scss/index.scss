@@ -27,6 +27,16 @@ header {
     }
 }
 
+/* Section spacing */
+
+@media screen AND (min-width: 568px) {
+    .section {
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 20px;
+    }
+}
+
 /* Header section other css */
 header {
     /* Make header sticky */
@@ -82,12 +92,29 @@ header {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-bottom: 30px;
 
     img {
         display: block;
-        width: 450px;
-        height: 420px;
+        // width: 450px;
+        // height: 420px;
+        // width: 50vw;
+        // height: 53.57vw; /* width to height ratio: 1.07142857 */
         border-radius: 5px;
+
+        @media screen AND (min-width: 768px) {
+            & {
+                width: 30vw;
+                height: 32.14vw; /* width to height ratio: 1.07142857 */
+            }
+        }
+
+        @media screen AND (max-width: 768px) {
+            & {
+                width: 90vw;
+                height: 96.43vw; /* width to height ratio: 1.07142857 */
+            }
+        }
     }
 
     .focus__your-needs {
@@ -96,12 +123,20 @@ header {
     .focus__your-needs--inner {
         /* Centering x y axis */
         display: block;
-        width: 480px;
-
-        padding: 20px;
+        // width: 480px;
+        width: 380px;
+        // min-width: 30vw;
+        padding: 10px;
         border-radius: 5px;
         background-color: var(--light);
         color: var(--med);
+
+        @media screen AND (max-width: 768px) {
+            & {
+                width: 90vw;
+            }
+        }
+
 
         ul {
             margin-top: 10px;

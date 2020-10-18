@@ -45,15 +45,8 @@
 }
 
 /* Utility classes: Sections */
-/* line 31, ../scss/_utility-classes.scss */
-.section {
-  padding-left: 40px;
-  padding-right: 40px;
-  margin-bottom: 20px;
-}
-
-/* Center horizontally and vertically */
-/* line 37, ../scss/_utility-classes.scss */
+/* Utility class: Center horizontally and vertically */
+/* line 33, ../scss/_utility-classes.scss */
 .center-x-y {
   display: block;
   margin: 0 auto;
@@ -61,20 +54,27 @@
   transform: translateY(-100%);
 }
 
+/* Utility class: Center horizontally */
+/* line 40, ../scss/_utility-classes.scss */
+.center-x {
+  display: block;
+  margin: 0 auto;
+}
+
 /* Utility classes: Different Devices */
-/* line 45, ../scss/_utility-classes.scss */
+/* line 46, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 52, ../scss/_utility-classes.scss */
+  /* line 53, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 57, ../scss/_utility-classes.scss */
+  /* line 58, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
@@ -109,8 +109,17 @@ header .site-menu {
   min-width: 330px;
 }
 
+/* Section spacing */
+@media screen and (min-width: 568px) {
+  /* line 33, ../scss/index.scss */
+  .section {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-bottom: 20px;
+  }
+}
 /* Header section other css */
-/* line 31, ../scss/index.scss */
+/* line 41, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
@@ -119,7 +128,7 @@ header {
   top: 0;
   padding-right: 15px;
 }
-/* line 40, ../scss/index.scss */
+/* line 50, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -128,108 +137,129 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 50, ../scss/index.scss */
+/* line 60, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 54, ../scss/index.scss */
+/* line 64, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 60, ../scss/index.scss */
+/* line 70, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 67, ../scss/index.scss */
+/* line 77, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 72, ../scss/index.scss */
+/* line 82, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 80, ../scss/index.scss */
+/* line 90, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  padding-bottom: 30px;
 }
-/* line 86, ../scss/index.scss */
+/* line 97, ../scss/index.scss */
 .focus img {
   display: block;
-  width: 450px;
-  height: 420px;
   border-radius: 5px;
 }
-/* line 93, ../scss/index.scss */
+@media screen and (min-width: 768px) {
+  /* line 106, ../scss/index.scss */
+  .focus img {
+    width: 30vw;
+    height: 32.14vw;
+    /* width to height ratio: 1.07142857 */
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 113, ../scss/index.scss */
+  .focus img {
+    width: 90vw;
+    height: 96.43vw;
+    /* width to height ratio: 1.07142857 */
+  }
+}
+/* line 120, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 96, ../scss/index.scss */
+/* line 123, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
-  width: 480px;
-  padding: 20px;
+  width: 380px;
+  padding: 10px;
   border-radius: 5px;
   background-color: var(--light);
   color: var(--med);
 }
-/* line 106, ../scss/index.scss */
+@media screen and (max-width: 768px) {
+  /* line 135, ../scss/index.scss */
+  .focus .focus__your-needs--inner {
+    width: 90vw;
+  }
+}
+/* line 141, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 109, ../scss/index.scss */
+/* line 144, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 111, ../scss/index.scss */
+/* line 146, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 123, ../scss/index.scss */
+/* line 158, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 128, ../scss/index.scss */
+/* line 163, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 131, ../scss/index.scss */
+/* line 166, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 137, ../scss/index.scss */
+/* line 172, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 140, ../scss/index.scss */
+/* line 175, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 145, ../scss/index.scss */
+/* line 180, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 148, ../scss/index.scss */
+/* line 183, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }

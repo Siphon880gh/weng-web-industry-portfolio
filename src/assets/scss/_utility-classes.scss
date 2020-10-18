@@ -28,17 +28,18 @@
 .section-title {
 
 }
-.section {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-bottom: 20px;
-}
-/* Center horizontally and vertically */
+
+/* Utility class: Center horizontally and vertically */
 .center-x-y {
     display: block;
     margin: 0 auto;
     margin-top: 50%;
     transform: translateY(-100%);
+}
+/* Utility class: Center horizontally */
+.center-x {
+    display: block;
+    margin: 0 auto;
 }
 
 /* Utility classes: Different Devices */

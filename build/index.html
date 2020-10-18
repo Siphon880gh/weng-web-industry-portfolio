@@ -17,10 +17,15 @@
 </head>
     <body>
         <header class="flex flex-row flex-space-between">
-            <h1 class="site-title">Weng Web Industry Portfolio</h1>
+            <span class="site-title">
+                <h1>
+                    <span class="hidden-xs-down padding-left-15px"></span>
+                    Weng Web Industry Porfolio
+                </h1>
+            </span>
             <nav class="site-menu" role="navigation" aria-label="Menu">
-                <ul class="flex flex-row flex-space-around">
-                    <li><a href="#focus">About Me</a></li>
+                <ul class="flex flex-row flex-space-between">
+                    <li><a href="#focus">About</a></li>
                     <li><a href="#tech">Tech</a></li>
                     <li><a href="#work">Work</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -31,15 +36,19 @@
         <section id="focus" class="focus section">
             <h2 class="section-title">About</h2>
             <div class="flex flex-row">
-                <img src="assets/img/coding-stock.jpg" alt="Eye catching">
-                <div>
-                    <p>Have a great idea? Contact me to get your idea launched!</p>
-                    <ul>
-                        <li>Idea to technical todo list</li>
-                        <li>Wireframe to mockup</li>
-                        <li>Testing</li>
-                        <li>Finished Product, SEO</li>
-                    </ul>
+                <div class="img-wrapper center-x">
+                    <img class="center-x" src="assets/img/me.png" alt="Picture of Weng">
+                </div>
+                <div class="focus__your-needs center-x">
+                    <div class="focus__your-needs--inner center-x-y">
+                        <p>Have a great idea? Contact me to get your idea launched!</p>
+                        <ul>
+                            <li>Idea to technical todo list</li>
+                            <li>Wireframe to mockup</li>
+                            <li>Testing</li>
+                            <li>Finished Product, SEO</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </section>
