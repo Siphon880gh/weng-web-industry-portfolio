@@ -95,13 +95,13 @@
 @media (max-width: 568px) {
   /* line 65, ../scss/_utility-classes.scss */
   .hidden-xs-down {
-    display: none;
+    display: none !important;
   }
 }
 @media (min-width: 568px) {
   /* line 70, ../scss/_utility-classes.scss */
   .hidden-xs-up {
-    display: none;
+    display: none !important;
   }
 }
 /* Color Theme */
@@ -154,16 +154,39 @@ header .site-menu {
     padding: 20px 10px;
   }
 }
-/* Last section is completely flushed to the side and bottom edges */
-/* line 49, ../scss/index.scss */
-footer {
-  margin: 0 !important;
-  /* Override previous margin rules that were more specific because of selectors */
-  padding: 0 !important;
+/* Section title rotated 90 degrees on Desktop */
+/* line 50, ../scss/index.scss */
+.section-title {
+  display: block;
+  width: 190px;
+  /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  text-align: left;
 }
 
+@media screen and (min-width: 1034px) {
+  /* line 60, ../scss/index.scss */
+  .section-title {
+    transform: rotate(-90deg);
+    float: left;
+    font-size: 2rem;
+    margin-top: 70px;
+    margin-bottom: 30px;
+    border-bottom: 4px solid var(--dark);
+    text-align: center;
+    vertical-align: bottom;
+  }
+
+  /* line 70, ../scss/index.scss */
+  .work .section-title {
+    margin-top: 90px;
+  }
+}
 /* Header section other css */
-/* line 55, ../scss/index.scss */
+/* line 76, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
@@ -172,7 +195,7 @@ header {
   top: 0;
   padding-right: 15px;
 }
-/* line 64, ../scss/index.scss */
+/* line 85, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -181,36 +204,36 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 74, ../scss/index.scss */
+/* line 95, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 78, ../scss/index.scss */
+/* line 99, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 84, ../scss/index.scss */
+/* line 105, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 91, ../scss/index.scss */
+/* line 112, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 96, ../scss/index.scss */
+/* line 117, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 104, ../scss/index.scss */
+/* line 125, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
@@ -218,13 +241,13 @@ header nav ul li a:hover {
   background-size: cover;
   padding-bottom: 30px;
 }
-/* line 111, ../scss/index.scss */
+/* line 132, ../scss/index.scss */
 .focus img {
   display: block;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 120, ../scss/index.scss */
+  /* line 141, ../scss/index.scss */
   .focus img {
     width: 30vw;
     height: 32.14vw;
@@ -232,83 +255,83 @@ header nav ul li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 127, ../scss/index.scss */
+  /* line 148, ../scss/index.scss */
   .focus img {
     width: 90vw;
     height: 96.43vw;
     /* width to height ratio: 1.07142857 */
   }
 }
-/* line 134, ../scss/index.scss */
+/* line 155, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 137, ../scss/index.scss */
+/* line 158, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
-  width: 380px;
-  padding: 10px;
+  width: 400px;
+  padding: 15px;
   border-radius: 5px;
   background-color: var(--light);
   color: var(--med);
 }
 @media screen and (max-width: 768px) {
-  /* line 149, ../scss/index.scss */
+  /* line 170, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     width: 90vw;
   }
 }
-/* line 155, ../scss/index.scss */
+/* line 176, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 158, ../scss/index.scss */
+/* line 179, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 160, ../scss/index.scss */
+/* line 181, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 172, ../scss/index.scss */
+/* line 193, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
 /* Tech section flexing css */
-/* line 178, ../scss/index.scss */
+/* line 199, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 181, ../scss/index.scss */
+/* line 202, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
 /* Tech section other css */
-/* line 188, ../scss/index.scss */
+/* line 209, ../scss/index.scss */
 .tech .section-title {
   color: var(--dark);
 }
-/* line 191, ../scss/index.scss */
+/* line 212, ../scss/index.scss */
 .tech .flex {
   border-radius: 5px;
   background-color: var(--dark);
   color: var(--light);
 }
-/* line 196, ../scss/index.scss */
+/* line 217, ../scss/index.scss */
 .tech .flex li {
   color: var(--light);
 }
 
 /* Grid on desktop */
-/* line 203, ../scss/index.scss */
+/* line 224, ../scss/index.scss */
 .grid {
   display: grid;
   margin: 0 auto;
@@ -320,17 +343,17 @@ header nav ul li a:hover {
   grid-auto-flow: dense;
   /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
 }
-/* line 214, ../scss/index.scss */
+/* line 235, ../scss/index.scss */
 .grid figure {
   width: 100%;
   height: 100%;
 }
-/* line 219, ../scss/index.scss */
+/* line 240, ../scss/index.scss */
 .grid figure:first-child {
   grid-column: 1 / span 4;
   grid-row: 1 / span 2;
 }
-/* line 224, ../scss/index.scss */
+/* line 245, ../scss/index.scss */
 .grid figure:not(:first-child) {
   grid-column-end: span 2;
   grid-row-end: span 1;
@@ -338,34 +361,34 @@ header nav ul li a:hover {
 
 /* Grid on mobile */
 @media screen and (max-width: 957px) {
-  /* line 233, ../scss/index.scss */
+  /* line 254, ../scss/index.scss */
   .grid {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-  /* line 238, ../scss/index.scss */
+  /* line 259, ../scss/index.scss */
   .grid figure {
     grid-column-end: span 1 !important;
     grid-row-end: span 1 !important;
   }
 }
 /* Work section other css */
-/* line 247, ../scss/index.scss */
+/* line 268, ../scss/index.scss */
 .work .section-title {
   color: var(--dark);
 }
-/* line 250, ../scss/index.scss */
+/* line 271, ../scss/index.scss */
 .work figure {
   border: 2px solid var(--dark);
   position: relative;
 }
-/* line 253, ../scss/index.scss */
+/* line 274, ../scss/index.scss */
 .work figure img {
   width: 100%;
   height: 100%;
 }
-/* line 257, ../scss/index.scss */
+/* line 278, ../scss/index.scss */
 .work figure figcaption {
   background-color: var(--dark);
   color: var(--shade);
@@ -379,59 +402,67 @@ header nav ul li a:hover {
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 272, ../scss/index.scss */
+  /* line 293, ../scss/index.scss */
   .work figure figcaption {
     font-size: 1.5rem;
     line-height: 2;
   }
 }
 /* Contact section flexing */
-/* line 281, ../scss/index.scss */
+/* line 302, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 284, ../scss/index.scss */
+/* line 305, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 289, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 293, ../scss/index.scss */
+/* line 314, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 302, ../scss/index.scss */
+/* line 323, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 305, ../scss/index.scss */
+/* line 326, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 310, ../scss/index.scss */
+/* line 331, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 313, ../scss/index.scss */
+/* line 334, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 317, ../scss/index.scss */
+/* line 338, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 322, ../scss/index.scss */
+/* line 343, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
+}
+
+/* Last section is completely flushed to the side and bottom edges */
+/* line 351, ../scss/index.scss */
+footer {
+  margin: 0 !important;
+  /* Override previous margin rules that were more specific because of selectors */
+  padding: 0 !important;
 }

@@ -45,10 +45,31 @@ header {
         }
     }
 }
-/* Last section is completely flushed to the side and bottom edges */
-footer {
-    margin: 0 !important; /* Override previous margin rules that were more specific because of selectors */
-    padding: 0 !important;
+
+/* Section title rotated 90 degrees on Desktop */
+.section-title {
+    display: block;
+    width: 190px; /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    margin-top:30px;
+    text-align: left;
+}
+@media screen AND (min-width:1034px) {
+    .section-title {
+        transform: rotate(-90deg);
+        float:left;
+        font-size: 2rem;
+        margin-top: 70px;
+        margin-bottom: 30px;
+        border-bottom: 4px solid var(--dark);
+        text-align: center;
+        vertical-align: bottom;
+    }
+    .work .section-title {
+        margin-top: 90px;
+    }
 }
 
 /* Header section other css */
@@ -138,9 +159,9 @@ header {
         /* Centering x y axis */
         display: block;
         // width: 480px;
-        width: 380px;
+        width: 400px;
         // min-width: 30vw;
-        padding: 10px;
+        padding: 15px;
         border-radius: 5px;
         background-color: var(--light);
         color: var(--med);
@@ -324,4 +345,10 @@ header {
             }
         }
     }
+}
+
+/* Last section is completely flushed to the side and bottom edges */
+footer {
+    margin: 0 !important; /* Override previous margin rules that were more specific because of selectors */
+    padding: 0 !important;
 }

@@ -63,11 +63,11 @@
 }
 @media (max-width: 568px) {
     .hidden-xs-down {
-        display: none;
+        display: none !important;
     }
 }
 @media (min-width: 568px) {
     .hidden-xs-up {
-        display: none;
+        display: none !important;
     }
 }
