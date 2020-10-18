@@ -37,6 +37,17 @@
     margin: 0 auto;
 }
 
+/* Utility text classes */
+.text-light {
+    color: var(--light);
+}
+.text-med {
+    color: var(--med);
+}
+.text-dark {
+    color: var(--dark);
+}
+
 /* Utility classes: Different Devices */
 .spacer-vertical-small {
     height: 10px;
