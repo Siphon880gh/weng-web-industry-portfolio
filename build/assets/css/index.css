@@ -336,23 +336,24 @@ header nav ul li a:hover {
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
+  padding-bottom: 0;
 }
-/* line 232, ../scss/index.scss */
+/* line 233, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 235, ../scss/index.scss */
+/* line 236, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 239, ../scss/index.scss */
+/* line 240, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 244, ../scss/index.scss */
+/* line 245, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
