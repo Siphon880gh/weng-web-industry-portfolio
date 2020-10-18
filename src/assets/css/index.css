@@ -409,68 +409,104 @@ header nav ul li a:hover {
   /* Todo: Review; Smooth out specific corner */
   border-bottom-right-radius: 5px;
 }
+/* line 296, ../scss/index.scss */
+.work figure .overlay {
+  /* Todo: Review: Overlay color when hovering */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 500ms;
+}
+/* line 305, ../scss/index.scss */
+.work figure .overlay:hover {
+  opacity: .15;
+}
+/* line 309, ../scss/index.scss */
+.work figure .overlay-1 {
+  background-color: blue;
+}
+/* line 312, ../scss/index.scss */
+.work figure .overlay-2 {
+  background-color: purple;
+}
+/* line 315, ../scss/index.scss */
+.work figure .overlay-3 {
+  background-color: red;
+}
+/* line 318, ../scss/index.scss */
+.work figure .overlay-4 {
+  background-color: blue;
+}
+/* line 321, ../scss/index.scss */
+.work figure .overlay-5 {
+  background-color: purple;
+}
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 301, ../scss/index.scss */
+  /* line 329, ../scss/index.scss */
   .work figure figcaption {
     font-size: 1.25rem;
     line-height: 2;
   }
 }
 /* Contact section flexing */
-/* line 310, ../scss/index.scss */
+/* line 338, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 313, ../scss/index.scss */
+/* line 341, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 318, ../scss/index.scss */
+/* line 346, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 322, ../scss/index.scss */
+/* line 350, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 331, ../scss/index.scss */
+/* line 359, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 334, ../scss/index.scss */
+/* line 362, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 339, ../scss/index.scss */
+/* line 367, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 342, ../scss/index.scss */
+/* line 370, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 346, ../scss/index.scss */
+/* line 374, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 351, ../scss/index.scss */
+/* line 379, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
 
 /* Last section is completely flushed to the side and bottom edges */
-/* line 359, ../scss/index.scss */
+/* line 387, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
