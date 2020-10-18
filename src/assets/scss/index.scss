@@ -195,42 +195,6 @@ header {
     }
 }
 
-/*
-<section id="tech" class="tech section">
-            <h2 class="section-title">Technology</h2>
-            <div class="flex flex-row">
-                <div>
-                    Or just need an in house developer, who can implement features, or fix bugs?
-                    <br><br>
-                    Weng can do:
-                </div>
-                <div>
-                    <span>Web</span>
-                    <ul>
-                        <li>Wireframing</li>
-                        <li>UX/UI</li>
-                        <li>Interactive</li>
-                        <li>Great look on mobile / tablet!</li>
-    
-                    </ul>
-                </div>
-                <div>
-                    <span>Servers</span>
-                    <ul>
-                        <li>Database</li>
-                        <li>API</li>
-                    </ul>
-                    <br>
-                    <span>Latest cutting edge</span>
-                    <ul>
-                        <li>React JS</li>
-                        <li>DevOps</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-*/
-
 /* Contact section flexing */
 .contact > .flex {
     & > *:nth-child(1) {  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
@@ -243,6 +207,7 @@ header {
 
         li {
             margin-bottom: 10px;
+            margin-right: 10px;
         }
         li::marker {
             content: "";

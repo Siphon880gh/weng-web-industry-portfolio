@@ -303,86 +303,52 @@ header nav ul li a:hover {
   color: var(--shade);
 }
 
-/*
-<section id="tech" class="tech section">
-            <h2 class="section-title">Technology</h2>
-            <div class="flex flex-row">
-                <div>
-                    Or just need an in house developer, who can implement features, or fix bugs?
-                    <br><br>
-                    Weng can do:
-                </div>
-                <div>
-                    <span>Web</span>
-                    <ul>
-                        <li>Wireframing</li>
-                        <li>UX/UI</li>
-                        <li>Interactive</li>
-                        <li>Great look on mobile / tablet!</li>
-    
-                    </ul>
-                </div>
-                <div>
-                    <span>Servers</span>
-                    <ul>
-                        <li>Database</li>
-                        <li>API</li>
-                    </ul>
-                    <br>
-                    <span>Latest cutting edge</span>
-                    <ul>
-                        <li>React JS</li>
-                        <li>DevOps</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-*/
 /* Contact section flexing */
-/* line 236, ../scss/index.scss */
+/* line 200, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 239, ../scss/index.scss */
+/* line 203, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 244, ../scss/index.scss */
+/* line 208, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
+  margin-right: 10px;
 }
-/* line 247, ../scss/index.scss */
+/* line 212, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 256, ../scss/index.scss */
+/* line 221, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 259, ../scss/index.scss */
+/* line 224, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
 }
-/* line 263, ../scss/index.scss */
+/* line 228, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 266, ../scss/index.scss */
+/* line 231, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 270, ../scss/index.scss */
+/* line 235, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 275, ../scss/index.scss */
+/* line 240, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
