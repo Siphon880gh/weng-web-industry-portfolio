@@ -136,16 +136,16 @@ header .site-menu {
 }
 
 /* Section spacing */
-@media screen and (max-width: 568px) {
+@media screen and (max-width: 768px) {
   /* line 33, ../scss/index.scss */
   .section, main, footer {
     margin-bottom: 20px;
   }
 }
-@media screen and (min-width: 568px) {
+@media screen and (min-width: 768px) {
   /* line 38, ../scss/index.scss */
   .section, main, footer {
-    padding-top: 20px 40px;
+    padding: 20px 40px;
     /*Todo: Review; Two value padding/margin means upper/lower and left/right */
     margin-bottom: 20px;
   }
@@ -307,63 +307,65 @@ header nav ul li a:hover {
   color: var(--light);
 }
 
-/* line 202, ../scss/index.scss */
-.work {
-  padding-bottom: 60px;
-}
-
-/* Work section griding css */
-/* line 206, ../scss/index.scss */
+/* Grid on desktop */
+/* line 203, ../scss/index.scss */
 .grid {
   display: grid;
-  width: 90vh;
-  height: 90vh;
-  grid-template-columns: repeat(4, minmax(25vh, 1fr));
-  grid-template-rows: repeat(4, minmax(25vh, 1fr));
+  margin: 0 auto;
+  width: 80%;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   justify-content: space-between;
   grid-gap: 5px;
   grid-auto-flow: dense;
   /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
 }
-/* line 216, ../scss/index.scss */
+/* line 214, ../scss/index.scss */
 .grid figure {
   width: 100%;
   height: 100%;
 }
-/* line 223, ../scss/index.scss */
+/* line 219, ../scss/index.scss */
 .grid figure:first-child {
+  grid-column: 1 / span 4;
   grid-row: 1 / span 2;
-  grid-column: 1 / span 2;
 }
-@media screen and (max-width: 568px) {
-  /* line 229, ../scss/index.scss */
-  .grid figure {
-    grid-column-end: span 2;
-    grid-row-end: span 1;
-  }
-}
-/* line 235, ../scss/index.scss */
+/* line 224, ../scss/index.scss */
 .grid figure:not(:first-child) {
   grid-column-end: span 2;
   grid-row-end: span 1;
 }
 
+/* Grid on mobile */
+@media screen and (max-width: 957px) {
+  /* line 233, ../scss/index.scss */
+  .grid {
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  /* line 238, ../scss/index.scss */
+  .grid figure {
+    grid-column-end: span 1 !important;
+    grid-row-end: span 1 !important;
+  }
+}
 /* Work section other css */
-/* line 243, ../scss/index.scss */
+/* line 247, ../scss/index.scss */
 .work .section-title {
   color: var(--dark);
 }
-/* line 246, ../scss/index.scss */
+/* line 250, ../scss/index.scss */
 .work figure {
   border: 2px solid var(--dark);
   position: relative;
 }
-/* line 249, ../scss/index.scss */
+/* line 253, ../scss/index.scss */
 .work figure img {
   width: 100%;
   height: 100%;
 }
-/* line 253, ../scss/index.scss */
+/* line 257, ../scss/index.scss */
 .work figure figcaption {
   background-color: var(--dark);
   color: var(--shade);
@@ -371,57 +373,65 @@ header nav ul li a:hover {
   position: absolute;
   bottom: 20px;
   left: 0;
-  line-height: 1.5;
   font-size: .8rem;
+  line-height: 1.5;
 }
 
+/* Work section on mobile */
+@media screen and (max-width: 957px) {
+  /* line 272, ../scss/index.scss */
+  .work figure figcaption {
+    font-size: 1.5rem;
+    line-height: 2;
+  }
+}
 /* Contact section flexing */
-/* line 268, ../scss/index.scss */
+/* line 281, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 271, ../scss/index.scss */
+/* line 284, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 276, ../scss/index.scss */
+/* line 289, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 280, ../scss/index.scss */
+/* line 293, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 289, ../scss/index.scss */
+/* line 302, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 292, ../scss/index.scss */
+/* line 305, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 297, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 300, ../scss/index.scss */
+/* line 313, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 304, ../scss/index.scss */
+/* line 317, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 309, ../scss/index.scss */
+/* line 322, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }

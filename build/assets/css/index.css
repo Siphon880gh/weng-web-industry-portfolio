@@ -110,7 +110,7 @@
   --dark: #21629A;
   --med: #FFFFFF;
   --light: #7fa5ba;
-  --shade: #0d9fee;
+  --shade: #a7b3b9;
 }
 
 /* line 11, ../scss/index.scss */
@@ -145,7 +145,7 @@ header .site-menu {
 @media screen and (min-width: 568px) {
   /* line 38, ../scss/index.scss */
   .section, main, footer {
-    padding-top: 20px 40px;
+    padding: 20px 40px;
     /*Todo: Review; Two value padding/margin means upper/lower and left/right */
     margin-bottom: 20px;
   }
@@ -304,56 +304,128 @@ header nav ul li a:hover {
 }
 /* line 196, ../scss/index.scss */
 .tech .flex li {
+  color: var(--light);
+}
+
+/* Grid on desktop */
+/* line 203, ../scss/index.scss */
+.grid {
+  display: grid;
+  margin: 0 auto;
+  width: 90vh;
+  height: 90vh;
+  grid-template-columns: repeat(4, minmax(25vh, 1fr));
+  grid-template-rows: repeat(4, minmax(25vh, 1fr));
+  justify-content: space-between;
+  grid-gap: 5px;
+  grid-auto-flow: dense;
+  /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
+}
+/* line 214, ../scss/index.scss */
+.grid figure {
+  width: 100%;
+  height: 100%;
+}
+/* line 219, ../scss/index.scss */
+.grid figure:first-child {
+  grid-row: 1 / span 2;
+  grid-column: 1 / span 2;
+}
+/* line 224, ../scss/index.scss */
+.grid figure:not(:first-child) {
+  grid-column-end: span 2;
+  grid-row-end: span 1;
+}
+
+/* Grid on mobile */
+@media screen and (max-width: 957px) {
+  /* line 233, ../scss/index.scss */
+  .grid {
+    width: none;
+    height: none;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  /* line 239, ../scss/index.scss */
+  .grid figure {
+    grid-column-end: span 1 !important;
+    grid-row-end: span 1 !important;
+  }
+}
+/* Work section other css */
+/* line 248, ../scss/index.scss */
+.work .section-title {
+  color: var(--dark);
+}
+/* line 251, ../scss/index.scss */
+.work figure {
+  border: 2px solid var(--dark);
+  position: relative;
+}
+/* line 254, ../scss/index.scss */
+.work figure img {
+  width: 100%;
+  height: 100%;
+}
+/* line 258, ../scss/index.scss */
+.work figure figcaption {
+  background-color: var(--dark);
   color: var(--shade);
+  padding: 10px;
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  line-height: 1.5;
+  font-size: .8rem;
 }
 
 /* Contact section flexing */
-/* line 204, ../scss/index.scss */
+/* line 273, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 207, ../scss/index.scss */
+/* line 276, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 212, ../scss/index.scss */
+/* line 281, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 216, ../scss/index.scss */
+/* line 285, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 225, ../scss/index.scss */
+/* line 294, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 228, ../scss/index.scss */
+/* line 297, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 233, ../scss/index.scss */
+/* line 302, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 236, ../scss/index.scss */
+/* line 305, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 240, ../scss/index.scss */
+/* line 309, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 245, ../scss/index.scss */
+/* line 314, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
