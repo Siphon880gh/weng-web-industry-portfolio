@@ -38,34 +38,40 @@
   justify-content: middle;
 }
 
+/* Utility classes: Spacing */
+/* line 23, ../scss/_utility-classes.scss */
+.padding-left-15px {
+  padding-left: 15px;
+}
+
 /* Utility classes: Sections */
-/* line 26, ../scss/_utility-classes.scss */
+/* line 31, ../scss/_utility-classes.scss */
 .section {
   padding-left: 40px;
   padding-right: 40px;
   margin-bottom: 20px;
 }
 
-/* line 31, ../scss/_utility-classes.scss */
+/* line 36, ../scss/_utility-classes.scss */
 .section:nth-child(2) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   margin-top: 20px;
 }
 
 /* Utility classes: Different Devices */
-/* line 36, ../scss/_utility-classes.scss */
+/* line 41, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 43, ../scss/_utility-classes.scss */
+  /* line 48, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 48, ../scss/_utility-classes.scss */
+  /* line 53, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
@@ -78,63 +84,105 @@
   --light: #26A4E7;
 }
 
+/* line 10, ../scss/index.scss */
+body {
+  font-family: "Lato", "Open+Sans";
+}
+
 /* Responsive Images that will shrink */
-/* line 11, ../scss/index.scss */
+/* line 15, ../scss/index.scss */
 img {
   width: 100%;
 }
 
-/* line 16, ../scss/index.scss */
+/* line 19, ../scss/index.scss */
+header {
+  /* Make header sticky */
+  background-color: var(--dark);
+  position: sticky;
+  height: 54px;
+  top: 0;
+}
+/* line 26, ../scss/index.scss */
 header .site-title {
   flex: 2 25%;
 }
-/* line 20, ../scss/index.scss */
+/* line 28, ../scss/index.scss */
+header .site-title h1 {
+  display: inline;
+  padding: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 50px;
+  vertical-align: text-bottom;
+}
+/* line 38, ../scss/index.scss */
 header .site-menu {
   flex: 1 25%;
 }
-/* line 23, ../scss/index.scss */
+/* line 41, ../scss/index.scss */
+header nav ul {
+  margin-top: 15px;
+}
+/* line 44, ../scss/index.scss */
 header nav ul li {
   display: block;
+  padding: 0 10px 5px 10px;
+  color: var(--light);
+  border-bottom: 2px solid var(--light);
+}
+/* line 50, ../scss/index.scss */
+header nav ul li:hover {
+  border-bottom: 2px solid var(--med);
+}
+/* line 54, ../scss/index.scss */
+header nav ul li a {
+  text-decoration: none;
+  color: var(--light);
+}
+/* line 58, ../scss/index.scss */
+header nav ul li a:hover {
+  color: var(--med);
 }
 
-/* line 28, ../scss/index.scss */
+/* line 65, ../scss/index.scss */
 .focus .flex li {
   display: list-item;
   margin-left: 4ch;
 }
-/* line 30, ../scss/index.scss */
+/* line 67, ../scss/index.scss */
 .focus .flex li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
-/* line 35, ../scss/index.scss */
+/* line 72, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 40, ../scss/index.scss */
+/* line 77, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 43, ../scss/index.scss */
+/* line 80, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 49, ../scss/index.scss */
+/* line 86, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   flex: 1;
 }
-/* line 52, ../scss/index.scss */
+/* line 89, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 57, ../scss/index.scss */
+/* line 94, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 60, ../scss/index.scss */
+/* line 97, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
