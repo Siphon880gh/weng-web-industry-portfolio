@@ -72,24 +72,34 @@
 }
 
 /* line 47, ../scss/_utility-classes.scss */
+.text-shade {
+  color: var(--shade);
+}
+
+/* line 50, ../scss/_utility-classes.scss */
 .text-dark {
   color: var(--dark);
 }
 
+/* line 53, ../scss/_utility-classes.scss */
+.text-bold {
+  font-weight: bold;
+}
+
 /* Utility classes: Different Devices */
-/* line 52, ../scss/_utility-classes.scss */
+/* line 58, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 59, ../scss/_utility-classes.scss */
+  /* line 65, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 64, ../scss/_utility-classes.scss */
+  /* line 70, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
@@ -99,26 +109,27 @@
 :root {
   --dark: #21629A;
   --med: #FFFFFF;
-  --light: #26A4E7;
+  --light: #7fa5ba;
+  --shade: #0d9fee;
 }
 
-/* line 10, ../scss/index.scss */
+/* line 11, ../scss/index.scss */
 body {
   font-family: "Lato", "Open+Sans";
 }
 
 /* Responsive Images that will shrink */
-/* line 15, ../scss/index.scss */
+/* line 16, ../scss/index.scss */
 img {
   width: 100%;
 }
 
 /* Header section flexing */
-/* line 20, ../scss/index.scss */
+/* line 21, ../scss/index.scss */
 header .site-title {
   flex-basis: 465px;
 }
-/* line 23, ../scss/index.scss */
+/* line 24, ../scss/index.scss */
 header .site-menu {
   flex-basis: 420px;
   min-width: 330px;
@@ -126,13 +137,13 @@ header .site-menu {
 
 /* Section spacing */
 @media screen and (max-width: 568px) {
-  /* line 32, ../scss/index.scss */
+  /* line 33, ../scss/index.scss */
   .section, main, footer {
     margin-bottom: 20px;
   }
 }
 @media screen and (min-width: 568px) {
-  /* line 37, ../scss/index.scss */
+  /* line 38, ../scss/index.scss */
   .section, main, footer {
     padding-left: 40px;
     padding-right: 40px;
@@ -140,7 +151,7 @@ header .site-menu {
   }
 }
 /* Last section is completely flushed to the side and bottom edges */
-/* line 44, ../scss/index.scss */
+/* line 45, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
@@ -148,7 +159,7 @@ footer {
 }
 
 /* Header section other css */
-/* line 50, ../scss/index.scss */
+/* line 51, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
@@ -157,7 +168,7 @@ header {
   top: 0;
   padding-right: 15px;
 }
-/* line 59, ../scss/index.scss */
+/* line 60, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -166,36 +177,36 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 69, ../scss/index.scss */
+/* line 70, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 73, ../scss/index.scss */
+/* line 74, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 79, ../scss/index.scss */
+/* line 80, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 86, ../scss/index.scss */
+/* line 87, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 91, ../scss/index.scss */
+/* line 92, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 99, ../scss/index.scss */
+/* line 100, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
@@ -203,13 +214,13 @@ header nav ul li a:hover {
   background-size: cover;
   padding-bottom: 30px;
 }
-/* line 106, ../scss/index.scss */
+/* line 107, ../scss/index.scss */
 .focus img {
   display: block;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 115, ../scss/index.scss */
+  /* line 116, ../scss/index.scss */
   .focus img {
     width: 30vw;
     height: 32.14vw;
@@ -217,18 +228,18 @@ header nav ul li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 122, ../scss/index.scss */
+  /* line 123, ../scss/index.scss */
   .focus img {
     width: 90vw;
     height: 96.43vw;
     /* width to height ratio: 1.07142857 */
   }
 }
-/* line 129, ../scss/index.scss */
+/* line 130, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 132, ../scss/index.scss */
+/* line 133, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
@@ -239,87 +250,139 @@ header nav ul li a:hover {
   color: var(--med);
 }
 @media screen and (max-width: 768px) {
-  /* line 144, ../scss/index.scss */
+  /* line 145, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     width: 90vw;
   }
 }
-/* line 150, ../scss/index.scss */
+/* line 151, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 153, ../scss/index.scss */
+/* line 154, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 155, ../scss/index.scss */
+/* line 156, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 167, ../scss/index.scss */
+/* line 168, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 172, ../scss/index.scss */
+/* Tech section flexing css */
+/* line 174, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 175, ../scss/index.scss */
+/* line 177, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
+/* Tech section other css */
+/* line 184, ../scss/index.scss */
+.tech .section-title {
+  color: var(--dark);
+}
+/* line 187, ../scss/index.scss */
+.tech .flex {
+  border-radius: 5px;
+  background-color: var(--dark);
+  color: var(--light);
+}
+/* line 192, ../scss/index.scss */
+.tech .flex li {
+  color: var(--shade);
+}
+
+/*
+<section id="tech" class="tech section">
+            <h2 class="section-title">Technology</h2>
+            <div class="flex flex-row">
+                <div>
+                    Or just need an in house developer, who can implement features, or fix bugs?
+                    <br><br>
+                    Weng can do:
+                </div>
+                <div>
+                    <span>Web</span>
+                    <ul>
+                        <li>Wireframing</li>
+                        <li>UX/UI</li>
+                        <li>Interactive</li>
+                        <li>Great look on mobile / tablet!</li>
+    
+                    </ul>
+                </div>
+                <div>
+                    <span>Servers</span>
+                    <ul>
+                        <li>Database</li>
+                        <li>API</li>
+                    </ul>
+                    <br>
+                    <span>Latest cutting edge</span>
+                    <ul>
+                        <li>React JS</li>
+                        <li>DevOps</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+*/
 /* Contact section flexing */
-/* line 182, ../scss/index.scss */
+/* line 236, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 185, ../scss/index.scss */
+/* line 239, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 190, ../scss/index.scss */
+/* line 244, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 193, ../scss/index.scss */
+/* line 247, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 202, ../scss/index.scss */
+/* line 256, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 205, ../scss/index.scss */
+/* line 259, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
 }
-/* line 209, ../scss/index.scss */
+/* line 263, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 212, ../scss/index.scss */
+/* line 266, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 216, ../scss/index.scss */
+/* line 270, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 221, ../scss/index.scss */
+/* line 275, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }

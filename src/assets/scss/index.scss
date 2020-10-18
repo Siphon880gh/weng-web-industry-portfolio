@@ -4,7 +4,8 @@
 :root {
     --dark: #21629A;
     --med: #FFFFFF;
-    --light: #26A4E7;
+    --light: #7fa5ba;
+    --shade: #0d9fee;
 }
 
 body {
@@ -169,6 +170,7 @@ header {
     }
 }
 
+/* Tech section flexing css */
 .tech .flex > div {
     flex-basis: 33%;
     padding: 10px;
@@ -176,6 +178,58 @@ header {
         margin-left: 4ch;
     }
 }
+
+/* Tech section other css */
+.tech {
+    .section-title {
+        color: var(--dark);
+    }
+    .flex {
+        border-radius: 5px;
+        background-color: var(--dark);
+        color: var(--light);
+
+        li {
+            color: var(--shade);
+        }
+    }
+}
+
+/*
+<section id="tech" class="tech section">
+            <h2 class="section-title">Technology</h2>
+            <div class="flex flex-row">
+                <div>
+                    Or just need an in house developer, who can implement features, or fix bugs?
+                    <br><br>
+                    Weng can do:
+                </div>
+                <div>
+                    <span>Web</span>
+                    <ul>
+                        <li>Wireframing</li>
+                        <li>UX/UI</li>
+                        <li>Interactive</li>
+                        <li>Great look on mobile / tablet!</li>
+    
+                    </ul>
+                </div>
+                <div>
+                    <span>Servers</span>
+                    <ul>
+                        <li>Database</li>
+                        <li>API</li>
+                    </ul>
+                    <br>
+                    <span>Latest cutting edge</span>
+                    <ul>
+                        <li>React JS</li>
+                        <li>DevOps</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+*/
 
 /* Contact section flexing */
 .contact > .flex {

@@ -44,8 +44,14 @@
 .text-med {
     color: var(--med);
 }
+.text-shade {
+    color: var(--shade);
+}
 .text-dark {
     color: var(--dark);
+}
+.text-bold {
+    font-weight: bold;
 }
 
 /* Utility classes: Different Devices */
