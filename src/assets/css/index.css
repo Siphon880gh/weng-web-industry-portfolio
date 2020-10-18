@@ -110,7 +110,7 @@
   --dark: #21629A;
   --med: #FFFFFF;
   --light: #7fa5ba;
-  --shade: #0d9fee;
+  --shade: #a7b3b9;
 }
 
 /* line 11, ../scss/index.scss */
@@ -304,7 +304,7 @@ header nav ul li a:hover {
 }
 /* line 196, ../scss/index.scss */
 .tech .flex li {
-  color: var(--shade);
+  color: var(--light);
 }
 
 /* line 202, ../scss/index.scss */

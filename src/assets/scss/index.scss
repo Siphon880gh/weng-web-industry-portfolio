@@ -5,7 +5,7 @@
     --dark: #21629A;
     --med: #FFFFFF;
     --light: #7fa5ba;
-    --shade: #0d9fee;
+    --shade: #a7b3b9;
 }
 
 body {
@@ -194,7 +194,7 @@ header {
         color: var(--light);
 
         li {
-            color: var(--shade);
+            color: var(--light);
         }
     }
 }
