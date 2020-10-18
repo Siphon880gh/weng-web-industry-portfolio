@@ -203,6 +203,12 @@ header {
         margin-left: 4ch;
     }
 }
+@media screen AND (max-width:768px) {
+    .tech .flex > div {
+        flex-basis: 100%;
+        padding-bottom: 20px;
+    }
+}
 
 /* Tech section other css */
 .tech {
@@ -291,7 +297,7 @@ header {
 /* Work section on mobile */
 @media screen AND (max-width:957px) {
     .work figure figcaption {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 2;
     }
 }

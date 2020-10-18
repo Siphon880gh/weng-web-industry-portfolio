@@ -314,24 +314,31 @@ header nav ul li a:hover {
   margin-left: 4ch;
 }
 
+@media screen and (max-width: 768px) {
+  /* line 207, ../scss/index.scss */
+  .tech .flex > div {
+    flex-basis: 100%;
+    padding-bottom: 20px;
+  }
+}
 /* Tech section other css */
-/* line 209, ../scss/index.scss */
+/* line 215, ../scss/index.scss */
 .tech .section-title {
   color: var(--dark);
 }
-/* line 212, ../scss/index.scss */
+/* line 218, ../scss/index.scss */
 .tech .flex {
   border-radius: 5px;
   background-color: var(--dark);
   color: var(--light);
 }
-/* line 217, ../scss/index.scss */
+/* line 223, ../scss/index.scss */
 .tech .flex li {
   color: var(--light);
 }
 
 /* Grid on desktop */
-/* line 224, ../scss/index.scss */
+/* line 230, ../scss/index.scss */
 .grid {
   display: grid;
   margin: 0 auto;
@@ -343,17 +350,17 @@ header nav ul li a:hover {
   grid-auto-flow: dense;
   /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
 }
-/* line 235, ../scss/index.scss */
+/* line 241, ../scss/index.scss */
 .grid figure {
   width: 100%;
   height: 100%;
 }
-/* line 240, ../scss/index.scss */
+/* line 246, ../scss/index.scss */
 .grid figure:first-child {
   grid-column: 1 / span 4;
   grid-row: 1 / span 2;
 }
-/* line 245, ../scss/index.scss */
+/* line 251, ../scss/index.scss */
 .grid figure:not(:first-child) {
   grid-column-end: span 2;
   grid-row-end: span 1;
@@ -361,34 +368,34 @@ header nav ul li a:hover {
 
 /* Grid on mobile */
 @media screen and (max-width: 957px) {
-  /* line 254, ../scss/index.scss */
+  /* line 260, ../scss/index.scss */
   .grid {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-  /* line 259, ../scss/index.scss */
+  /* line 265, ../scss/index.scss */
   .grid figure {
     grid-column-end: span 1 !important;
     grid-row-end: span 1 !important;
   }
 }
 /* Work section other css */
-/* line 268, ../scss/index.scss */
+/* line 274, ../scss/index.scss */
 .work .section-title {
   color: var(--dark);
 }
-/* line 271, ../scss/index.scss */
+/* line 277, ../scss/index.scss */
 .work figure {
   border: 2px solid var(--dark);
   position: relative;
 }
-/* line 274, ../scss/index.scss */
+/* line 280, ../scss/index.scss */
 .work figure img {
   width: 100%;
   height: 100%;
 }
-/* line 278, ../scss/index.scss */
+/* line 284, ../scss/index.scss */
 .work figure figcaption {
   background-color: var(--dark);
   color: var(--shade);
@@ -402,65 +409,65 @@ header nav ul li a:hover {
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 293, ../scss/index.scss */
+  /* line 299, ../scss/index.scss */
   .work figure figcaption {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     line-height: 2;
   }
 }
 /* Contact section flexing */
-/* line 302, ../scss/index.scss */
+/* line 308, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 305, ../scss/index.scss */
+/* line 311, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 310, ../scss/index.scss */
+/* line 316, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 314, ../scss/index.scss */
+/* line 320, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 323, ../scss/index.scss */
+/* line 329, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 326, ../scss/index.scss */
+/* line 332, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 331, ../scss/index.scss */
+/* line 337, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 334, ../scss/index.scss */
+/* line 340, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 338, ../scss/index.scss */
+/* line 344, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 343, ../scss/index.scss */
+/* line 349, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
 
 /* Last section is completely flushed to the side and bottom edges */
-/* line 351, ../scss/index.scss */
+/* line 357, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
