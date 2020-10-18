@@ -28,9 +28,13 @@ header {
 }
 
 /* Section spacing */
-
+@media screen AND (max-width: 568px) {
+    .section, main {
+        margin-bottom: 20px;
+    }
+}
 @media screen AND (min-width: 568px) {
-    .section {
+    .section, main {
         padding-left: 40px;
         padding-right: 40px;
         margin-bottom: 20px;
@@ -168,6 +172,7 @@ header {
     }
 }
 
+/* Contact section flexing */
 .contact > .flex {
     & > *:nth-child(1) {  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
         flex: 1;
@@ -186,3 +191,48 @@ header {
         
     }
 }
+
+/* Contact section other css */
+.contact {
+    .section-title {
+        color: var(--dark);
+    }
+    .flex {
+        padding-top: 10px;
+        background-color: var(--dark);
+    }
+    li {
+        border-bottom: 2px solid var(--light);
+        transition: border 500ms;
+        &:hover {
+            border-bottom: 2px solid var(--med);
+        }
+
+        a {
+            color: var(--light);
+            transition: color 500ms;
+            text-decoration: none;
+
+            &:hover {
+                color: var(--med);
+            }
+        }
+    }
+}
+
+/**
+<footer id="contact" class="contact section">
+            <h2 class="section-title">Contact</h2>
+            <div class="spacer-vertical-small hidden-xs-up"></div>
+            <div class="flex flex-row flex-space-between">
+                <h3 class="hidden-xs-down">Contact me! Or see my CV:</h3>
+                <ul class="flex flex-row flex-space-around">
+                    <li><a href="tel:3238427514" target="_blank">323-842-7514</a></li>
+                    <li><a href="mailto:weffung@ucdavis.edu" target="_blank">weffung@ucdavis.edu</a></li>
+                    <li><a href="//github.com/Siphon880gh" target="_blank">Github</a></li>
+                    <li><a href="//www.linkedin.com/in/weng-fei-fung-50103b16/" target="_blank">LinkedIn</a></li>
+                    <li><a href="//www.wengindustry.com" target="_blank">WengIndustry.com</a></li>
+                </ul>
+            </div>
+        </footer>
+*/

@@ -44,9 +44,8 @@
   padding-left: 15px;
 }
 
-/* Utility classes: Sections */
 /* Utility class: Center horizontally and vertically */
-/* line 33, ../scss/_utility-classes.scss */
+/* line 28, ../scss/_utility-classes.scss */
 .center-x-y {
   display: block;
   margin: 0 auto;
@@ -55,26 +54,26 @@
 }
 
 /* Utility class: Center horizontally */
-/* line 40, ../scss/_utility-classes.scss */
+/* line 35, ../scss/_utility-classes.scss */
 .center-x {
   display: block;
   margin: 0 auto;
 }
 
 /* Utility classes: Different Devices */
-/* line 46, ../scss/_utility-classes.scss */
+/* line 41, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 53, ../scss/_utility-classes.scss */
+  /* line 48, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 58, ../scss/_utility-classes.scss */
+  /* line 53, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
@@ -110,16 +109,22 @@ header .site-menu {
 }
 
 /* Section spacing */
+@media screen and (max-width: 568px) {
+  /* line 32, ../scss/index.scss */
+  .section, main {
+    margin-bottom: 20px;
+  }
+}
 @media screen and (min-width: 568px) {
-  /* line 33, ../scss/index.scss */
-  .section {
+  /* line 37, ../scss/index.scss */
+  .section, main {
     padding-left: 40px;
     padding-right: 40px;
     margin-bottom: 20px;
   }
 }
 /* Header section other css */
-/* line 41, ../scss/index.scss */
+/* line 45, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
@@ -128,7 +133,7 @@ header {
   top: 0;
   padding-right: 15px;
 }
-/* line 50, ../scss/index.scss */
+/* line 54, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -137,36 +142,36 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 60, ../scss/index.scss */
+/* line 64, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 64, ../scss/index.scss */
+/* line 68, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 70, ../scss/index.scss */
+/* line 74, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 77, ../scss/index.scss */
+/* line 81, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 82, ../scss/index.scss */
+/* line 86, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 90, ../scss/index.scss */
+/* line 94, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
@@ -174,13 +179,13 @@ header nav ul li a:hover {
   background-size: cover;
   padding-bottom: 30px;
 }
-/* line 97, ../scss/index.scss */
+/* line 101, ../scss/index.scss */
 .focus img {
   display: block;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 106, ../scss/index.scss */
+  /* line 110, ../scss/index.scss */
   .focus img {
     width: 30vw;
     height: 32.14vw;
@@ -188,18 +193,18 @@ header nav ul li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 113, ../scss/index.scss */
+  /* line 117, ../scss/index.scss */
   .focus img {
     width: 90vw;
     height: 96.43vw;
     /* width to height ratio: 1.07142857 */
   }
 }
-/* line 120, ../scss/index.scss */
+/* line 124, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 123, ../scss/index.scss */
+/* line 127, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
@@ -210,56 +215,104 @@ header nav ul li a:hover {
   color: var(--med);
 }
 @media screen and (max-width: 768px) {
-  /* line 135, ../scss/index.scss */
+  /* line 139, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     width: 90vw;
   }
 }
-/* line 141, ../scss/index.scss */
+/* line 145, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 144, ../scss/index.scss */
+/* line 148, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 146, ../scss/index.scss */
+/* line 150, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 158, ../scss/index.scss */
+/* line 162, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 163, ../scss/index.scss */
+/* line 167, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 166, ../scss/index.scss */
+/* line 170, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 172, ../scss/index.scss */
+/* Contact section flexing */
+/* line 177, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 175, ../scss/index.scss */
+/* line 180, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 180, ../scss/index.scss */
+/* line 185, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 183, ../scss/index.scss */
+/* line 188, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
+
+/* Contact section other css */
+/* line 197, ../scss/index.scss */
+.contact .section-title {
+  color: var(--dark);
+}
+/* line 200, ../scss/index.scss */
+.contact .flex {
+  padding-top: 10px;
+  background-color: var(--dark);
+}
+/* line 204, ../scss/index.scss */
+.contact li {
+  border-bottom: 2px solid var(--light);
+  transition: border 500ms;
+}
+/* line 207, ../scss/index.scss */
+.contact li:hover {
+  border-bottom: 2px solid var(--med);
+}
+/* line 211, ../scss/index.scss */
+.contact li a {
+  color: var(--light);
+  transition: color 500ms;
+  text-decoration: none;
+}
+/* line 216, ../scss/index.scss */
+.contact li a:hover {
+  color: var(--med);
+}
+
+/**
+<footer id="contact" class="contact section">
+            <h2 class="section-title">Contact</h2>
+            <div class="spacer-vertical-small hidden-xs-up"></div>
+            <div class="flex flex-row flex-space-between">
+                <h3 class="hidden-xs-down">Contact me! Or see my CV:</h3>
+                <ul class="flex flex-row flex-space-around">
+                    <li><a href="tel:3238427514" target="_blank">323-842-7514</a></li>
+                    <li><a href="mailto:weffung@ucdavis.edu" target="_blank">weffung@ucdavis.edu</a></li>
+                    <li><a href="//github.com/Siphon880gh" target="_blank">Github</a></li>
+                    <li><a href="//www.linkedin.com/in/weng-fei-fung-50103b16/" target="_blank">LinkedIn</a></li>
+                    <li><a href="//www.wengindustry.com" target="_blank">WengIndustry.com</a></li>
+                </ul>
+            </div>
+        </footer>
+*/
