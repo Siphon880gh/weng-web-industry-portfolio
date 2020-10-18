@@ -405,69 +405,72 @@ header nav ul li a:hover {
   left: 0;
   font-size: .8rem;
   line-height: 1.5;
+  border-top-right-radius: 5px;
+  /* Todo: Review; Smooth out specific corner */
+  border-bottom-right-radius: 5px;
 }
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 299, ../scss/index.scss */
+  /* line 301, ../scss/index.scss */
   .work figure figcaption {
     font-size: 1.25rem;
     line-height: 2;
   }
 }
 /* Contact section flexing */
-/* line 308, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 311, ../scss/index.scss */
+/* line 313, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 316, ../scss/index.scss */
+/* line 318, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 320, ../scss/index.scss */
+/* line 322, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 329, ../scss/index.scss */
+/* line 331, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 332, ../scss/index.scss */
+/* line 334, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 337, ../scss/index.scss */
+/* line 339, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 340, ../scss/index.scss */
+/* line 342, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 344, ../scss/index.scss */
+/* line 346, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 349, ../scss/index.scss */
+/* line 351, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
 
 /* Last section is completely flushed to the side and bottom edges */
-/* line 357, ../scss/index.scss */
+/* line 359, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
