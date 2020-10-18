@@ -15,31 +15,38 @@ body {
 img {
     width: 100%;
 }
+/* Header section flexing */
+header {
+    .site-title {
+        flex-basis: 465px;
+    }
+    .site-menu {
+        flex-basis: 420px;
+        min-width: 330px;
+        // max-width: 500px;
+    }
+}
 
+/* Header section other css */
 header {
     /* Make header sticky */
     background-color: var(--dark);
     position: sticky;
     min-height: 55px;
     top: 0;
+    padding-right: 15px;
 
     .site-title {
-        flex: 2 25%;
         h1 {
             display: inline;
             padding: 10px 10px 10px 0;
             margin: 10px 0;
             background-color: var(--light);
             color: var(--dark);
-            // line-height: 50px;
-            // vertical-align: text-bottom;
             vertical-align: middle;
         }
     }
     
-    .site-menu {
-        flex: 1 25%;
-    }
     nav ul {
         margin-top: 15px;
 
@@ -71,7 +78,6 @@ header {
 
 /* About section other css */
 .focus {
-
     background-image: url("../../assets/img/coding-stock.jpg");
     background-repeat: no-repeat;
     background-position: center;
@@ -79,7 +85,6 @@ header {
 
     img {
         display: block;
-        margin: 0 auto;
         width: 450px;
         height: 420px;
         border-radius: 5px;
@@ -92,9 +97,6 @@ header {
         /* Centering x y axis */
         display: block;
         width: 480px;
-        margin: 0 auto;
-        margin-top: 50%;
-        transform: translateY(-100%);
 
         padding: 20px;
         border-radius: 5px;
@@ -132,7 +134,7 @@ header {
 }
 
 .contact > .flex {
-    & > *:nth-child(1) {
+    & > *:nth-child(1) {  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
         flex: 1;
     }
     & > *:nth-child(2) {

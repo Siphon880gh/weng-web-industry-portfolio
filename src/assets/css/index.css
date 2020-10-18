@@ -52,26 +52,29 @@
   margin-bottom: 20px;
 }
 
-/* line 36, ../scss/_utility-classes.scss */
-.section:nth-child(2) {
-  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
-  margin-top: 20px;
+/* Center horizontally and vertically */
+/* line 37, ../scss/_utility-classes.scss */
+.center-x-y {
+  display: block;
+  margin: 0 auto;
+  margin-top: 50%;
+  transform: translateY(-100%);
 }
 
 /* Utility classes: Different Devices */
-/* line 41, ../scss/_utility-classes.scss */
+/* line 45, ../scss/_utility-classes.scss */
 .spacer-vertical-small {
   height: 10px;
 }
 
 @media (max-width: 568px) {
-  /* line 48, ../scss/_utility-classes.scss */
+  /* line 52, ../scss/_utility-classes.scss */
   .hidden-xs-down {
     display: none;
   }
 }
 @media (min-width: 568px) {
-  /* line 53, ../scss/_utility-classes.scss */
+  /* line 57, ../scss/_utility-classes.scss */
   .hidden-xs-up {
     display: none;
   }
@@ -95,19 +98,28 @@ img {
   width: 100%;
 }
 
-/* line 19, ../scss/index.scss */
+/* Header section flexing */
+/* line 20, ../scss/index.scss */
+header .site-title {
+  flex-basis: 465px;
+}
+/* line 23, ../scss/index.scss */
+header .site-menu {
+  flex-basis: 420px;
+  min-width: 330px;
+}
+
+/* Header section other css */
+/* line 31, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
   position: sticky;
   min-height: 55px;
   top: 0;
+  padding-right: 15px;
 }
-/* line 26, ../scss/index.scss */
-header .site-title {
-  flex: 2 25%;
-}
-/* line 28, ../scss/index.scss */
+/* line 40, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -116,115 +128,108 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 40, ../scss/index.scss */
-header .site-menu {
-  flex: 1 25%;
-}
-/* line 43, ../scss/index.scss */
+/* line 50, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 47, ../scss/index.scss */
+/* line 54, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 53, ../scss/index.scss */
+/* line 60, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 60, ../scss/index.scss */
+/* line 67, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 65, ../scss/index.scss */
+/* line 72, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 73, ../scss/index.scss */
+/* line 80, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-/* line 80, ../scss/index.scss */
+/* line 86, ../scss/index.scss */
 .focus img {
   display: block;
-  margin: 0 auto;
   width: 450px;
   height: 420px;
   border-radius: 5px;
 }
-/* line 88, ../scss/index.scss */
+/* line 93, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 91, ../scss/index.scss */
+/* line 96, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
   width: 480px;
-  margin: 0 auto;
-  margin-top: 50%;
-  transform: translateY(-100%);
   padding: 20px;
   border-radius: 5px;
   background-color: var(--light);
   color: var(--med);
 }
-/* line 104, ../scss/index.scss */
+/* line 106, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 107, ../scss/index.scss */
+/* line 109, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 109, ../scss/index.scss */
+/* line 111, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 121, ../scss/index.scss */
+/* line 123, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 126, ../scss/index.scss */
+/* line 128, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 129, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 135, ../scss/index.scss */
+/* line 137, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
+  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 138, ../scss/index.scss */
+/* line 140, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 143, ../scss/index.scss */
+/* line 145, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 146, ../scss/index.scss */
+/* line 148, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
