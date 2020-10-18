@@ -100,7 +100,7 @@ header {
   /* Make header sticky */
   background-color: var(--dark);
   position: sticky;
-  height: 54px;
+  min-height: 55px;
   top: 0;
 }
 /* line 26, ../scss/index.scss */
@@ -110,79 +110,121 @@ header .site-title {
 /* line 28, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
-  padding: 10px;
+  padding: 10px 10px 10px 0;
+  margin: 10px 0;
   background-color: var(--light);
   color: var(--dark);
-  line-height: 50px;
-  vertical-align: text-bottom;
+  vertical-align: middle;
 }
-/* line 38, ../scss/index.scss */
+/* line 40, ../scss/index.scss */
 header .site-menu {
   flex: 1 25%;
 }
-/* line 41, ../scss/index.scss */
+/* line 43, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
+  /* Site menu hovering */
 }
-/* line 44, ../scss/index.scss */
+/* line 47, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 50, ../scss/index.scss */
+/* line 53, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
+  transition: color 500ms;
 }
-/* line 54, ../scss/index.scss */
+/* line 60, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
+  transition: color 500ms;
 }
-/* line 58, ../scss/index.scss */
+/* line 65, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
-/* line 65, ../scss/index.scss */
-.focus .flex li {
-  display: list-item;
+/* About section other css */
+/* line 73, ../scss/index.scss */
+.focus {
+  background-image: url("../../assets/img/coding-stock.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/* line 80, ../scss/index.scss */
+.focus img {
+  display: block;
+  margin: 0 auto;
+  width: 450px;
+  height: 420px;
+  border-radius: 5px;
+}
+/* line 88, ../scss/index.scss */
+.focus .focus__your-needs {
+  width: 100%;
+}
+/* line 91, ../scss/index.scss */
+.focus .focus__your-needs--inner {
+  /* Centering x y axis */
+  display: block;
+  width: 480px;
+  margin: 0 auto;
+  margin-top: 50%;
+  transform: translateY(-100%);
+  padding: 20px;
+  border-radius: 5px;
+  background-color: var(--light);
+  color: var(--med);
+}
+/* line 104, ../scss/index.scss */
+.focus .focus__your-needs--inner ul {
+  margin-top: 10px;
+}
+/* line 107, ../scss/index.scss */
+.focus .focus__your-needs--inner ul li {
+  display: block;
   margin-left: 4ch;
 }
-/* line 67, ../scss/index.scss */
-.focus .flex li::before {
+/* line 109, ../scss/index.scss */
+.focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
-/* line 72, ../scss/index.scss */
+
+/* About section flexing */
+/* line 121, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
-/* line 77, ../scss/index.scss */
+/* line 126, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 80, ../scss/index.scss */
+/* line 129, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
-/* line 86, ../scss/index.scss */
+/* line 135, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   flex: 1;
 }
-/* line 89, ../scss/index.scss */
+/* line 138, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 94, ../scss/index.scss */
+/* line 143, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
 }
-/* line 97, ../scss/index.scss */
+/* line 146, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }

@@ -20,18 +20,20 @@ header {
     /* Make header sticky */
     background-color: var(--dark);
     position: sticky;
-    height: 54px;
+    min-height: 55px;
     top: 0;
 
     .site-title {
         flex: 2 25%;
         h1 {
             display: inline;
-            padding: 10px;
+            padding: 10px 10px 10px 0;
+            margin: 10px 0;
             background-color: var(--light);
             color: var(--dark);
-            line-height: 50px;
-            vertical-align: text-bottom;
+            // line-height: 50px;
+            // vertical-align: text-bottom;
+            vertical-align: middle;
         }
     }
     
@@ -41,6 +43,7 @@ header {
     nav ul {
         margin-top: 15px;
 
+        /* Site menu hovering */
         li {
             display: block;
             padding: 0 10px 5px 10px;
@@ -49,11 +52,15 @@ header {
 
             &:hover {
                 border-bottom: 2px solid var(--med);
+                // color: var(--med) !important;
+                // transition: border 500ms;
+                transition: color 500ms;
             }
 
             a {
                 text-decoration: none;
                 color: var(--light);
+                transition: color 500ms;
             }
             a:hover {
                 color: var(--med);
@@ -61,14 +68,56 @@ header {
         }
     }
 }
-.focus .flex {
-    li {
-        display: list-item;
-        &::before {
-            content: "★\00a0"; /* Todo: Review; Unicode for space on list item marker */
-        }
-        margin-left: 4ch;
+
+/* About section other css */
+.focus {
+
+    background-image: url("../../assets/img/coding-stock.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    img {
+        display: block;
+        margin: 0 auto;
+        width: 450px;
+        height: 420px;
+        border-radius: 5px;
     }
+
+    .focus__your-needs {
+        width: 100%;
+    }
+    .focus__your-needs--inner {
+        /* Centering x y axis */
+        display: block;
+        width: 480px;
+        margin: 0 auto;
+        margin-top: 50%;
+        transform: translateY(-100%);
+
+        padding: 20px;
+        border-radius: 5px;
+        background-color: var(--light);
+        color: var(--med);
+
+        ul {
+            margin-top: 10px;
+            
+            li {
+                display: block;
+                &::before {
+                    content: "★\00a0"; /* Todo: Review; Unicode for space on list item marker */
+                }
+                margin-left: 4ch;
+            }
+        }
+    }
+}
+
+/* About section flexing */
+.focus .flex {
+
     & > * {
         flex-basis: 50%;
     }
