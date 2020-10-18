@@ -145,13 +145,17 @@ header .site-menu {
 @media screen and (min-width: 568px) {
   /* line 38, ../scss/index.scss */
   .section, main, footer {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-top: 20px 40px;
+    /*Todo: Review; Two value padding/margin means upper/lower and left/right */
     margin-bottom: 20px;
+  }
+  /* line 42, ../scss/index.scss */
+  .section .flex, main .flex, footer .flex {
+    padding: 20px 10px;
   }
 }
 /* Last section is completely flushed to the side and bottom edges */
-/* line 45, ../scss/index.scss */
+/* line 49, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
@@ -159,7 +163,7 @@ footer {
 }
 
 /* Header section other css */
-/* line 51, ../scss/index.scss */
+/* line 55, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--dark);
@@ -168,7 +172,7 @@ header {
   top: 0;
   padding-right: 15px;
 }
-/* line 60, ../scss/index.scss */
+/* line 64, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   padding: 10px 10px 10px 0;
@@ -177,36 +181,36 @@ header .site-title h1 {
   color: var(--dark);
   vertical-align: middle;
 }
-/* line 70, ../scss/index.scss */
+/* line 74, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 74, ../scss/index.scss */
+/* line 78, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 80, ../scss/index.scss */
+/* line 84, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--med);
   transition: color 500ms;
 }
-/* line 87, ../scss/index.scss */
+/* line 91, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 92, ../scss/index.scss */
+/* line 96, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--med);
 }
 
 /* About section other css */
-/* line 100, ../scss/index.scss */
+/* line 104, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
@@ -214,13 +218,13 @@ header nav ul li a:hover {
   background-size: cover;
   padding-bottom: 30px;
 }
-/* line 107, ../scss/index.scss */
+/* line 111, ../scss/index.scss */
 .focus img {
   display: block;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 116, ../scss/index.scss */
+  /* line 120, ../scss/index.scss */
   .focus img {
     width: 30vw;
     height: 32.14vw;
@@ -228,18 +232,18 @@ header nav ul li a:hover {
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 123, ../scss/index.scss */
+  /* line 127, ../scss/index.scss */
   .focus img {
     width: 90vw;
     height: 96.43vw;
     /* width to height ratio: 1.07142857 */
   }
 }
-/* line 130, ../scss/index.scss */
+/* line 134, ../scss/index.scss */
 .focus .focus__your-needs {
   width: 100%;
 }
-/* line 133, ../scss/index.scss */
+/* line 137, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   /* Centering x y axis */
   display: block;
@@ -250,105 +254,105 @@ header nav ul li a:hover {
   color: var(--med);
 }
 @media screen and (max-width: 768px) {
-  /* line 145, ../scss/index.scss */
+  /* line 149, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     width: 90vw;
   }
 }
-/* line 151, ../scss/index.scss */
+/* line 155, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 154, ../scss/index.scss */
+/* line 158, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 156, ../scss/index.scss */
+/* line 160, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 
 /* About section flexing */
-/* line 168, ../scss/index.scss */
+/* line 172, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
 /* Tech section flexing css */
-/* line 174, ../scss/index.scss */
+/* line 178, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 177, ../scss/index.scss */
+/* line 181, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
 /* Tech section other css */
-/* line 184, ../scss/index.scss */
+/* line 188, ../scss/index.scss */
 .tech .section-title {
   color: var(--dark);
 }
-/* line 187, ../scss/index.scss */
+/* line 191, ../scss/index.scss */
 .tech .flex {
   border-radius: 5px;
   background-color: var(--dark);
   color: var(--light);
 }
-/* line 192, ../scss/index.scss */
+/* line 196, ../scss/index.scss */
 .tech .flex li {
   color: var(--shade);
 }
 
 /* Contact section flexing */
-/* line 200, ../scss/index.scss */
+/* line 204, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 203, ../scss/index.scss */
+/* line 207, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 208, ../scss/index.scss */
+/* line 212, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 212, ../scss/index.scss */
+/* line 216, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 221, ../scss/index.scss */
+/* line 225, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 224, ../scss/index.scss */
+/* line 228, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
 }
-/* line 228, ../scss/index.scss */
+/* line 232, ../scss/index.scss */
 .contact li {
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 231, ../scss/index.scss */
+/* line 235, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 235, ../scss/index.scss */
+/* line 239, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 240, ../scss/index.scss */
+/* line 244, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }

@@ -36,9 +36,13 @@ header {
 }
 @media screen AND (min-width: 568px) {
     .section, main, footer {
-        padding-left: 40px;
-        padding-right: 40px;
+        padding-top: 20px 40px; /*Todo: Review; Two value padding/margin means upper/lower and left/right */
         margin-bottom: 20px;
+
+        .flex {
+            padding: 20px 10px;
+
+        }
     }
 }
 /* Last section is completely flushed to the side and bottom edges */
