@@ -93,6 +93,13 @@ header {
             color: var(--dark);
             vertical-align: middle;
         }
+
+        @media screen AND (max-width: 663px) {
+            h1 {
+                font-size: 1.8rem;
+                line-height: 1.5;
+            }
+        }
     }
     
     nav ul {
