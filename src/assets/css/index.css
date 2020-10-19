@@ -6,6 +6,28 @@
   box-sizing: border-box;
 }
 
+/* Img acting as background-images that can do contain, cover, and positioning */
+/* line 2, ../scss/_image-clipping.scss */
+.img-contain {
+  object-fit: contain;
+  object-position: 50% 50%;
+  /* default value: image is centered */
+}
+
+/* line 6, ../scss/_image-clipping.scss */
+.img-clip-0-0 {
+  object-fit: cover;
+  object-position: 0 0;
+  /* positioned top left of the content box */
+}
+
+/* line 10, ../scss/_image-clipping.scss */
+.img-clip-50-50 {
+  object-fit: cover;
+  object-position: 50% 50%;
+  /* default value: image is centered */
+}
+
 /* Utility classes: Flex */
 /* line 2, ../scss/_utility-classes.scss */
 .flex {
@@ -109,30 +131,6 @@
     display: none !important;
   }
 }
-/* Img acting as background-images that can do contain, cover, and positioning */
-/* line 2, ../scss/_image-clipping.scss */
-.img-contain {
-  object-fit: contain;
-  object-position: 50% 50%;
-  /* default value: image is centered*/
-  object-position: 0 0;
-  /* positioned top left of the content box */
-}
-
-/* line 7, ../scss/_image-clipping.scss */
-.img-clip-0-0 {
-  object-fit: cover;
-  object-position: 0 0;
-  /* positioned top left of the content box */
-}
-
-/* line 11, ../scss/_image-clipping.scss */
-.img-clip-50-50 {
-  object-fit: cover;
-  object-position: 50% 50%;
-  /* default value: image is centered*/
-}
-
 /* Color Theme */
 /* line 4, ../scss/index.scss */
 :root {
