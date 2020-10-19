@@ -8,14 +8,16 @@ View Portfolio
 
 Technology used on this portfolio
 ---
-- NPM
-- Livereload
-- Compass
 - CSS3
 - HTML5
+- NPM
+- Compass (SCSS)
+- Livereload
+- Balsamiq (Wireframing)
 
 Wireframing
 ---
+<!-- Todo: Review; Wireframing tool: Balsamiq -->
 ### Desktop
 ![Desktop](README/desktop.png)
 
