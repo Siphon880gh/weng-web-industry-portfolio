@@ -348,19 +348,24 @@ header {
     color: var(--light);
     padding: 10px;
     li {
-
-        &::marker {
+        display: block;
+        &::marker, &::before {
             content: "";
         }
 
+        /* Spacing and colors in the credited items */
         details {
             /* Remove collapse/expand icon for <details> */
             summary::-webkit-details-marker {
                 display: none;
             }
-            position: relative;
-            margin-top:5px;
-
+            summary {
+                margin: 5px 0;
+            }
+            & > div {
+                margin: 5px 18px;
+            }
+            
             .fa-info {
                 margin-right: 1ch;
                 cursor: pointer;
@@ -407,6 +412,7 @@ header {
         padding-bottom: 0;
     }
     li {
+        display: inline-block;
         border-bottom: 2px solid var(--light);
         transition: border 500ms;
         &:hover {
