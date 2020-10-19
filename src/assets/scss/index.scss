@@ -1,4 +1,4 @@
-@import 'reset-css', 'utility-classes';
+@import 'reset-css', 'utility-classes', 'image-clipping';
 
 /* Color Theme */
 :root {
@@ -282,7 +282,7 @@ header {
         color: var(--dark);
     }
     figure {
-        border: 2px solid var(--dark);
+        border: 4px solid var(--dark);
         position: relative;
         img {
             width: 100%;

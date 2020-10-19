@@ -109,6 +109,30 @@
     display: none !important;
   }
 }
+/* Img acting as background-images that can do contain, cover, and positioning */
+/* line 2, ../scss/_image-clipping.scss */
+.img-contain {
+  object-fit: contain;
+  object-position: 50% 50%;
+  /* default value: image is centered*/
+  object-position: 0 0;
+  /* positioned top left of the content box */
+}
+
+/* line 7, ../scss/_image-clipping.scss */
+.img-clip-0-0 {
+  object-fit: cover;
+  object-position: 0 0;
+  /* positioned top left of the content box */
+}
+
+/* line 11, ../scss/_image-clipping.scss */
+.img-clip-50-50 {
+  object-fit: cover;
+  object-position: 50% 50%;
+  /* default value: image is centered*/
+}
+
 /* Color Theme */
 /* line 4, ../scss/index.scss */
 :root {
@@ -403,7 +427,7 @@ header nav ul li a:hover {
 }
 /* line 284, ../scss/index.scss */
 .work figure {
-  border: 2px solid var(--dark);
+  border: 4px solid var(--dark);
   position: relative;
 }
 /* line 287, ../scss/index.scss */
@@ -480,87 +504,99 @@ header nav ul li a:hover {
   color: var(--light);
   padding: 10px;
 }
+/* line 350, ../scss/index.scss */
+.credited.flushed-to-grid li {
+  display: block;
+  /* Spacing and colors in the credited items */
+}
 /* line 352, ../scss/index.scss */
-.credited.flushed-to-grid li::marker {
+.credited.flushed-to-grid li::marker, .credited.flushed-to-grid li::before {
   content: "";
 }
-/* line 356, ../scss/index.scss */
+/* line 357, ../scss/index.scss */
 .credited.flushed-to-grid li details {
   /* Remove collapse/expand icon for <details> */
-  position: relative;
-  margin-top: 5px;
 }
-/* line 358, ../scss/index.scss */
+/* line 359, ../scss/index.scss */
 .credited.flushed-to-grid li details summary::-webkit-details-marker {
   display: none;
 }
-/* line 364, ../scss/index.scss */
+/* line 362, ../scss/index.scss */
+.credited.flushed-to-grid li details summary {
+  margin: 5px 0;
+}
+/* line 365, ../scss/index.scss */
+.credited.flushed-to-grid li details > div {
+  margin: 5px 18px;
+}
+/* line 369, ../scss/index.scss */
 .credited.flushed-to-grid li details .fa-info {
   margin-right: 1ch;
   cursor: pointer;
 }
-/* line 368, ../scss/index.scss */
+/* line 373, ../scss/index.scss */
 .credited.flushed-to-grid li details a {
   color: var(--shade);
 }
-/* line 371, ../scss/index.scss */
+/* line 376, ../scss/index.scss */
 .credited.flushed-to-grid li details a:hover {
   color: var(--med);
 }
 
 /* Contact section flexing */
-/* line 380, ../scss/index.scss */
+/* line 385, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 383, ../scss/index.scss */
+/* line 388, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 388, ../scss/index.scss */
+/* line 393, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 392, ../scss/index.scss */
+/* line 397, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 401, ../scss/index.scss */
+/* line 406, ../scss/index.scss */
 .contact .section-title {
   color: var(--dark);
 }
-/* line 404, ../scss/index.scss */
+/* line 409, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--dark);
   padding-bottom: 0;
 }
-/* line 409, ../scss/index.scss */
+/* line 414, ../scss/index.scss */
 .contact li {
+  display: inline-block;
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 412, ../scss/index.scss */
+/* line 418, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--med);
 }
-/* line 416, ../scss/index.scss */
+/* line 422, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 421, ../scss/index.scss */
+/* line 427, ../scss/index.scss */
 .contact li a:hover {
   color: var(--med);
 }
 
 /* Last section is completely flushed to the side and bottom edges */
-/* line 429, ../scss/index.scss */
+/* line 435, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
