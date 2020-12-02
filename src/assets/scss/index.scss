@@ -1,6 +1,9 @@
-@import 'reset-css', 'image-clipping', 'utility-classes';
+@import 'reset-css',
+'image-clipping',
+'utility-classes';
 
 /* Color Theme */
+
 :root {
     --dark: #21629A;
     --med: #FFFFFF;
@@ -12,11 +15,16 @@ body {
     font-family: "Lato", "Open+Sans";
 }
 
+
 /* Responsive Images that will shrink */
+
 img {
     width: 100%;
 }
+
+
 /* Header section flexing */
+
 header {
     .site-title {
         flex-basis: 465px;
@@ -29,38 +37,48 @@ header {
     border-bottom: 1px solid gray;
 }
 
+
 /* Section spacing */
+
 @media screen AND (max-width: 768px) {
-    .section, main, footer {
+    .section,
+    main,
+    footer {
         margin-bottom: 20px;
     }
 }
-@media screen AND (min-width: 768px) {
-    .section, main, footer {
-        padding: 20px 40px; /*Todo: Review; Two value padding/margin means upper/lower and left/right */
-        margin-bottom: 20px;
 
+@media screen AND (min-width: 768px) {
+    .section,
+    main,
+    footer {
+        padding: 20px 40px;
+        /*Todo: Review; Two value padding/margin means upper/lower and left/right */
+        margin-bottom: 20px;
         .flex {
             padding: 20px 10px;
-
         }
     }
 }
 
+
 /* Section title rotated 90 degrees on Desktop */
+
 .section-title {
     display: block;
-    width: 190px; /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
+    width: 190px;
+    /* Rotate needs same width for all section titles or will be placed on x axis inconsistently */
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
-    margin-top:30px;
+    margin-top: 30px;
     text-align: left;
 }
+
 @media screen AND (min-width:1034px) {
     .section-title {
         transform: rotate(-90deg);
-        float:left;
+        float: left;
         font-size: 2rem;
         margin-top: 70px;
         margin-bottom: 30px;
@@ -73,7 +91,9 @@ header {
     }
 }
 
+
 /* Header section other css */
+
 header {
     /* Make header sticky */
     background-color: var(--dark);
@@ -83,7 +103,6 @@ header {
     top: 0;
     padding-right: 15px;
     padding-bottom: 10px;
-
     .site-title {
         h1 {
             display: inline;
@@ -93,7 +112,6 @@ header {
             color: var(--dark);
             vertical-align: middle;
         }
-
         @media screen AND (max-width: 663px) {
             h1 {
                 font-size: 1.8rem;
@@ -101,24 +119,20 @@ header {
             }
         }
     }
-    
     nav ul {
         margin-top: 15px;
-
         /* Site menu hovering */
         li {
             display: block;
             padding: 0 10px 5px 10px;
             color: var(--light);
             border-bottom: 2px solid var(--light);
-
             &:hover {
                 border-bottom: 2px solid var(--med);
                 // color: var(--med) !important;
                 // transition: border 500ms;
                 transition: color 500ms;
             }
-
             a {
                 text-decoration: none;
                 color: var(--light);
@@ -131,14 +145,15 @@ header {
     }
 }
 
+
 /* About section other css */
+
 .focus {
     background-image: url("../../assets/img/coding-stock.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     padding-bottom: 30px;
-
     img {
         display: block;
         // width: 450px;
@@ -146,22 +161,22 @@ header {
         // width: 50vw;
         // height: 53.57vw; /* width to height ratio: 1.07142857 */
         border-radius: 5px;
-
         @media screen AND (min-width: 768px) {
             & {
                 width: 30vw;
-                height: 32.14vw; /* width to height ratio: 1.07142857 */
+                height: 32.14vw;
+                /* width to height ratio: 1.07142857 */
             }
         }
-
         @media screen AND (max-width: 768px) {
             & {
                 width: 90vw;
-                height: 96.43vw; /* width to height ratio: 1.07142857 */
+                height: 96.43vw;
+                /* width to height ratio: 1.07142857 */
+                margin-top: 4ch;
             }
         }
     }
-
     .focus__your-needs {
         width: 100%;
     }
@@ -175,21 +190,18 @@ header {
         border-radius: 5px;
         background-color: var(--light);
         color: var(--med);
-
         @media screen AND (max-width: 768px) {
             & {
                 width: 90vw;
             }
         }
-
-
         ul {
             margin-top: 10px;
-            
             li {
                 display: block;
                 &::before {
-                    content: "★\00a0"; /* Todo: Review; Unicode for space on list item marker */
+                    content: "★\00a0";
+                    /* Todo: Review; Unicode for space on list item marker */
                 }
                 margin-left: 4ch;
             }
@@ -197,30 +209,36 @@ header {
     }
 }
 
-/* About section flexing */
-.focus .flex {
 
-    & > * {
+/* About section flexing */
+
+.focus .flex {
+    &>* {
         flex-basis: 50%;
     }
 }
 
+
 /* Tech section flexing css */
-.tech .flex > div {
+
+.tech .flex>div {
     flex-basis: 33%;
     padding: 10px;
     li {
         margin-left: 4ch;
     }
 }
+
 @media screen AND (max-width:768px) {
-    .tech .flex > div {
+    .tech .flex>div {
         flex-basis: 100%;
         padding-bottom: 20px;
     }
 }
 
+
 /* Tech section other css */
+
 .tech {
     .section-title {
         color: var(--dark);
@@ -229,14 +247,15 @@ header {
         border-radius: 5px;
         background-color: var(--dark);
         color: var(--light);
-
         li {
             color: var(--light);
         }
     }
 }
 
+
 /* Grid on desktop */
+
 .grid {
     display: grid;
     margin: 0 auto;
@@ -246,18 +265,16 @@ header {
     grid-template-rows: repeat(2, 1fr);
     justify-content: space-between;
     grid-gap: 5px;
-    grid-auto-flow: dense; /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
-
+    grid-auto-flow: dense;
+    /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
     figure {
         width: 100%;
         height: 100%;
     }
-
     figure:first-child {
         grid-column: 1 / span 4;
         grid-row: 1 / span 2;
     }
-
     figure:not(:first-child) {
         grid-column-end: span 2;
         grid-row-end: span 1;
@@ -266,12 +283,12 @@ header {
 
 
 /* Grid on mobile */
+
 @media screen AND (max-width:957px) {
     .grid {
-        width:100%;
+        width: 100%;
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(5, 1fr);
-
         figure {
             grid-column-end: span 1 !important;
             grid-row-end: span 1 !important;
@@ -283,7 +300,9 @@ header {
     }
 }
 
+
 /* Work section other css */
+
 .work {
     .section-title {
         color: var(--dark);
@@ -304,10 +323,12 @@ header {
             left: 0;
             font-size: .8rem;
             line-height: 1.5;
-            border-top-right-radius: 5px; /* Todo: Review; Smooth out specific corner */
+            border-top-right-radius: 5px;
+            /* Todo: Review; Smooth out specific corner */
             border-bottom-right-radius: 5px;
         }
-        .overlay { /* Todo: Review: Overlay color when hovering */
+        .overlay {
+            /* Todo: Review: Overlay color when hovering */
             width: 100%;
             height: 100%;
             position: absolute;
@@ -338,7 +359,9 @@ header {
     }
 }
 
+
 /* Work section on mobile */
+
 @media screen AND (max-width:957px) {
     .work figure figcaption {
         font-size: 1.25rem;
@@ -346,20 +369,22 @@ header {
     }
 }
 
+
 /* Credited section that's a nested section of Work */
+
 .credited.flushed-to-grid {
     grid-column-end: span 8;
-    margin-top:20px;
+    margin-top: 20px;
     width: 100% !important;
     background-color: var(--dark);
     color: var(--light);
     padding: 10px;
     li {
         display: block;
-        &::marker, &::before {
+        &::marker,
+        &::before {
             content: "";
         }
-
         /* Spacing and colors in the credited items */
         details {
             /* Remove collapse/expand icon for <details> */
@@ -369,10 +394,9 @@ header {
             summary {
                 margin: 5px 0;
             }
-            & > div {
+            &>div {
                 margin: 5px 18px;
             }
-            
             .fa-info {
                 margin-right: 1ch;
                 cursor: pointer;
@@ -387,16 +411,18 @@ header {
     }
 }
 
+
 /* Contact section flexing */
-.contact > .flex {
-    & > *:nth-child(1) {  /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
+
+.contact>.flex {
+    &>*:nth-child(1) {
+        /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
         flex: 1;
     }
-    & > *:nth-child(2) {
+    &>*:nth-child(2) {
         flex: 2;
     }
     ul {
-
         li {
             margin-bottom: 10px;
             margin-right: 10px;
@@ -404,11 +430,12 @@ header {
         li::marker {
             content: "";
         }
-        
     }
 }
 
+
 /* Contact section other css */
+
 .contact {
     .section-title {
         color: var(--dark);
@@ -425,12 +452,10 @@ header {
         &:hover {
             border-bottom: 2px solid var(--med);
         }
-
         a {
             color: var(--light);
             transition: color 500ms;
             text-decoration: none;
-
             &:hover {
                 color: var(--med);
             }
@@ -438,8 +463,11 @@ header {
     }
 }
 
+
 /* Last section is completely flushed to the side and bottom edges */
+
 footer {
-    margin: 0 !important; /* Override previous margin rules that were more specific because of selectors */
+    margin: 0 !important;
+    /* Override previous margin rules that were more specific because of selectors */
     padding: 0 !important;
 }
