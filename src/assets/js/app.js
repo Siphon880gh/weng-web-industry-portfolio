@@ -1,1 +1,0 @@
-console.info("%cApp init: %cPassed", "font-weight:bold", "font-style:italic; color:green;");
