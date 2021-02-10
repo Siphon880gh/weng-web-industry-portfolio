@@ -29,6 +29,7 @@ img {
 /* Header section flexing */
 
 header {
+    z-index: 5 !important;
     .site-title {
         flex-basis: 465px;
     }
@@ -372,19 +373,19 @@ header {
                 opacity: .15;
             }
         }
-        .overlay-1 {
+        .overlay-color-1 {
             background-color: blue;
         }
-        .overlay-2 {
+        .overlay-color-2 {
             background-color: purple;
         }
-        .overlay-3 {
+        .overlay-color-3 {
             background-color: red;
         }
-        .overlay-4 {
+        .overlay-color-4 {
             background-color: blue;
         }
-        .overlay-5 {
+        .overlay-color-5 {
             background-color: purple;
         }
     }
@@ -503,6 +504,29 @@ header {
                 color: var(--white);
             }
         }
+    }
+}
+
+
+/* Toggle description */
+
+.display-none {
+    display: none;
+}
+
+.overlay-toggle-description {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    & a {
+        color: purple;
+        & i {
+            cursor: pointer;
+        }
+    }
+    & a:hover {
+        color: red;
     }
 }
 

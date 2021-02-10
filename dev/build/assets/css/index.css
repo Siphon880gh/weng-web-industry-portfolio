@@ -158,13 +158,14 @@ img {
 /* Header section flexing */
 /* line 31, ../scss/index.scss */
 header {
+  z-index: 5 !important;
   border-bottom: 1px solid gray;
 }
-/* line 32, ../scss/index.scss */
+/* line 33, ../scss/index.scss */
 header .site-title {
   flex-basis: 465px;
 }
-/* line 35, ../scss/index.scss */
+/* line 36, ../scss/index.scss */
 header .site-menu {
   flex-basis: 420px;
   min-width: 330px;
@@ -172,7 +173,7 @@ header .site-menu {
 
 /* Section spacing */
 @media screen and (max-width: 768px) {
-  /* line 47, ../scss/index.scss */
+  /* line 48, ../scss/index.scss */
   .section,
   main,
   footer {
@@ -180,7 +181,7 @@ header .site-menu {
   }
 }
 @media screen and (min-width: 768px) {
-  /* line 55, ../scss/index.scss */
+  /* line 56, ../scss/index.scss */
   .section,
   main,
   footer {
@@ -188,7 +189,7 @@ header .site-menu {
     /*Todo: Review; Two value padding/margin means upper/lower and left/right */
     margin-bottom: 20px;
   }
-  /* line 61, ../scss/index.scss */
+  /* line 62, ../scss/index.scss */
   .section .flex,
   main .flex,
   footer .flex {
@@ -196,7 +197,7 @@ header .site-menu {
   }
 }
 /* Section title rotated 90 degrees on Desktop */
-/* line 70, ../scss/index.scss */
+/* line 71, ../scss/index.scss */
 .section-title {
   display: block;
   width: 190px;
@@ -209,7 +210,7 @@ header .site-menu {
 }
 
 @media screen and (min-width: 1034px) {
-  /* line 82, ../scss/index.scss */
+  /* line 83, ../scss/index.scss */
   .section-title {
     transform: rotate(-90deg);
     float: left;
@@ -221,13 +222,13 @@ header .site-menu {
     vertical-align: bottom;
   }
 
-  /* line 92, ../scss/index.scss */
+  /* line 93, ../scss/index.scss */
   .work .section-title {
     margin-top: 90px;
   }
 }
 /* Header section other css */
-/* line 100, ../scss/index.scss */
+/* line 101, ../scss/index.scss */
 header {
   /* Make header sticky */
   background-color: var(--med);
@@ -239,11 +240,11 @@ header {
   padding-right: 15px;
   padding-bottom: 10px;
 }
-/* line 110, ../scss/index.scss */
+/* line 111, ../scss/index.scss */
 header .site-title {
   padding: 5px;
 }
-/* line 112, ../scss/index.scss */
+/* line 113, ../scss/index.scss */
 header .site-title h1 {
   display: inline;
   line-height: 1.5;
@@ -251,42 +252,42 @@ header .site-title h1 {
   vertical-align: middle;
 }
 @media screen and (max-width: 663px) {
-  /* line 121, ../scss/index.scss */
+  /* line 122, ../scss/index.scss */
   header .site-title h1 {
     font-size: 1.8rem;
     line-height: 1.5;
   }
 }
-/* line 127, ../scss/index.scss */
+/* line 128, ../scss/index.scss */
 header nav ul {
   margin-top: 15px;
   /* Site menu hovering */
 }
-/* line 130, ../scss/index.scss */
+/* line 131, ../scss/index.scss */
 header nav ul li {
   display: block;
   padding: 0 10px 5px 10px;
   color: var(--light);
   border-bottom: 2px solid var(--light);
 }
-/* line 135, ../scss/index.scss */
+/* line 136, ../scss/index.scss */
 header nav ul li:hover {
   border-bottom: 2px solid var(--white);
   transition: color 500ms;
 }
-/* line 141, ../scss/index.scss */
+/* line 142, ../scss/index.scss */
 header nav ul li a {
   text-decoration: none;
   color: var(--light);
   transition: color 500ms;
 }
-/* line 146, ../scss/index.scss */
+/* line 147, ../scss/index.scss */
 header nav ul li a:hover {
   color: var(--white);
 }
 
 /* About section other css */
-/* line 156, ../scss/index.scss */
+/* line 157, ../scss/index.scss */
 .focus {
   background-image: url("../../assets/img/coding-stock.jpg");
   background-repeat: no-repeat;
@@ -294,37 +295,37 @@ header nav ul li a:hover {
   background-size: cover;
   padding-bottom: 30px;
 }
-/* line 162, ../scss/index.scss */
+/* line 163, ../scss/index.scss */
 .focus img {
   display: block;
   border-radius: 5px;
 }
 @media screen and (min-width: 768px) {
-  /* line 170, ../scss/index.scss */
+  /* line 171, ../scss/index.scss */
   .focus img {
     width: 30vw;
     /* width to height ratio: 1.07142857 */
   }
 }
 @media screen and (max-width: 768px) {
-  /* line 177, ../scss/index.scss */
+  /* line 178, ../scss/index.scss */
   .focus img {
     width: 90vw;
     /* width to height ratio: 1.07142857 */
     margin-top: 4ch;
   }
 }
-/* line 185, ../scss/index.scss */
+/* line 186, ../scss/index.scss */
 .focus .focus__your-needs {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
-/* line 190, ../scss/index.scss */
+/* line 191, ../scss/index.scss */
 .focus .focus__your-needs--inner:hover {
   background-color: var(--light);
 }
-/* line 193, ../scss/index.scss */
+/* line 194, ../scss/index.scss */
 .focus .focus__your-needs--inner {
   transition: background-color 400ms;
   width: 33vw;
@@ -337,89 +338,89 @@ header nav ul li a:hover {
   /* ul */
 }
 @media screen and (max-width: 768px) {
-  /* line 198, ../scss/index.scss */
+  /* line 199, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     width: 90vw;
   }
 }
-/* line 210, ../scss/index.scss */
+/* line 211, ../scss/index.scss */
 .focus .focus__your-needs--inner ul {
   margin-top: 10px;
 }
-/* line 212, ../scss/index.scss */
+/* line 213, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li {
   display: block;
   margin-left: 4ch;
 }
-/* line 214, ../scss/index.scss */
+/* line 215, ../scss/index.scss */
 .focus .focus__your-needs--inner ul li::before {
   content: "★\00a0";
   /* Todo: Review; Unicode for space on list item marker */
 }
 @media screen and (max-width: 768px) {
-  /* line 223, ../scss/index.scss */
+  /* line 224, ../scss/index.scss */
   .focus .focus__your-needs--inner {
     margin-top: 2ch;
   }
 }
 
 /* About section flexing */
-/* line 234, ../scss/index.scss */
+/* line 235, ../scss/index.scss */
 .focus .flex > * {
   flex-basis: 50%;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 240, ../scss/index.scss */
+  /* line 241, ../scss/index.scss */
   .focus .flex > * {
     flex-basis: 100%;
   }
 }
 /* Tech section flexing css */
-/* line 248, ../scss/index.scss */
+/* line 249, ../scss/index.scss */
 .tech .flex > div {
   flex-basis: 33%;
   padding: 10px;
 }
-/* line 251, ../scss/index.scss */
+/* line 252, ../scss/index.scss */
 .tech .flex > div li {
   margin-left: 4ch;
 }
 
 @media screen and (max-width: 768px) {
-  /* line 257, ../scss/index.scss */
+  /* line 258, ../scss/index.scss */
   .tech .flex > div {
     flex-basis: 100%;
     padding-bottom: 20px;
   }
 }
 /* Tech section other css */
-/* line 267, ../scss/index.scss */
+/* line 268, ../scss/index.scss */
 .tech .section-title {
   color: var(--med);
 }
-/* line 270, ../scss/index.scss */
+/* line 271, ../scss/index.scss */
 .tech .flex {
   border-radius: 5px;
   background-color: var(--dark);
   transition: background-color 400ms;
   color: var(--light);
 }
-/* line 275, ../scss/index.scss */
+/* line 276, ../scss/index.scss */
 .tech .flex:hover {
   background-color: var(--light);
 }
-/* line 277, ../scss/index.scss */
+/* line 278, ../scss/index.scss */
 .tech .flex:hover li {
   color: var(--white);
 }
-/* line 281, ../scss/index.scss */
+/* line 282, ../scss/index.scss */
 .tech .flex li {
   color: var(--light);
 }
 
 /* Grid on desktop */
-/* line 290, ../scss/index.scss */
+/* line 291, ../scss/index.scss */
 .grid {
   display: grid;
   margin: 0 auto;
@@ -431,17 +432,17 @@ header nav ul li a:hover {
   grid-auto-flow: dense;
   /* Grid items that are not given coordinates, automatically fill in as much blank spaces from top left origin as possible */
 }
-/* line 301, ../scss/index.scss */
+/* line 302, ../scss/index.scss */
 .grid figure {
   width: 100%;
   height: 100%;
 }
-/* line 305, ../scss/index.scss */
+/* line 306, ../scss/index.scss */
 .grid figure:first-child {
   grid-column: 1 / span 4;
   grid-row: 1 / span 2;
 }
-/* line 309, ../scss/index.scss */
+/* line 310, ../scss/index.scss */
 .grid figure:not(:first-child) {
   grid-column-end: span 2;
   grid-row-end: span 1;
@@ -449,39 +450,39 @@ header nav ul li a:hover {
 
 /* Grid on mobile */
 @media screen and (max-width: 957px) {
-  /* line 319, ../scss/index.scss */
+  /* line 320, ../scss/index.scss */
   .grid {
     width: 100%;
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: repeat(5, 1fr);
   }
-  /* line 323, ../scss/index.scss */
+  /* line 324, ../scss/index.scss */
   .grid figure {
     grid-column-end: span 1 !important;
     grid-row-end: span 1 !important;
   }
-  /* line 327, ../scss/index.scss */
+  /* line 328, ../scss/index.scss */
   .grid .flushed-to-grid {
     grid-column-end: span 1 !important;
     grid-row-end: fit-content;
   }
 }
 /* Work section other css */
-/* line 338, ../scss/index.scss */
+/* line 339, ../scss/index.scss */
 .work .section-title {
   color: var(--med);
 }
-/* line 341, ../scss/index.scss */
+/* line 342, ../scss/index.scss */
 .work figure {
   border: 4px solid var(--med);
   position: relative;
 }
-/* line 344, ../scss/index.scss */
+/* line 345, ../scss/index.scss */
 .work figure img {
   width: 100%;
   height: 100%;
 }
-/* line 348, ../scss/index.scss */
+/* line 349, ../scss/index.scss */
 .work figure figcaption {
   background-color: var(--med);
   color: var(--shade);
@@ -495,7 +496,7 @@ header nav ul li a:hover {
   /* Todo: Review; Smooth out specific corner */
   border-bottom-right-radius: 5px;
 }
-/* line 361, ../scss/index.scss */
+/* line 362, ../scss/index.scss */
 .work figure .overlay {
   /* Todo: Review: Overlay color when hovering */
   width: 100%;
@@ -507,41 +508,41 @@ header nav ul li a:hover {
   opacity: 0;
   transition: opacity 500ms;
 }
-/* line 371, ../scss/index.scss */
+/* line 372, ../scss/index.scss */
 .work figure .overlay:hover {
   opacity: .15;
 }
-/* line 375, ../scss/index.scss */
-.work figure .overlay-1 {
+/* line 376, ../scss/index.scss */
+.work figure .overlay-color-1 {
   background-color: blue;
 }
-/* line 378, ../scss/index.scss */
-.work figure .overlay-2 {
+/* line 379, ../scss/index.scss */
+.work figure .overlay-color-2 {
   background-color: purple;
 }
-/* line 381, ../scss/index.scss */
-.work figure .overlay-3 {
+/* line 382, ../scss/index.scss */
+.work figure .overlay-color-3 {
   background-color: red;
 }
-/* line 384, ../scss/index.scss */
-.work figure .overlay-4 {
+/* line 385, ../scss/index.scss */
+.work figure .overlay-color-4 {
   background-color: blue;
 }
-/* line 387, ../scss/index.scss */
-.work figure .overlay-5 {
+/* line 388, ../scss/index.scss */
+.work figure .overlay-color-5 {
   background-color: purple;
 }
 
 /* Work section on mobile */
 @media screen and (max-width: 957px) {
-  /* line 397, ../scss/index.scss */
+  /* line 398, ../scss/index.scss */
   .work figure figcaption {
     font-size: 1.25rem;
     line-height: 2;
   }
 }
 /* Credited section that's a nested section of Work */
-/* line 406, ../scss/index.scss */
+/* line 407, ../scss/index.scss */
 .credited {
   grid-column-end: span 8;
   margin-top: 20px;
@@ -550,114 +551,140 @@ header nav ul li a:hover {
   color: var(--light);
   padding: 10px;
 }
-/* line 413, ../scss/index.scss */
+/* line 414, ../scss/index.scss */
 .credited li {
   display: block;
   /* Spacing and colors in the credited items */
 }
-/* line 415, ../scss/index.scss */
+/* line 416, ../scss/index.scss */
 .credited li::marker, .credited li::before {
   content: "";
 }
-/* line 420, ../scss/index.scss */
+/* line 421, ../scss/index.scss */
 .credited li details {
   /* Remove collapse/expand icon for <details> */
 }
-/* line 422, ../scss/index.scss */
+/* line 423, ../scss/index.scss */
 .credited li details summary::-webkit-details-marker {
   display: none;
 }
-/* line 425, ../scss/index.scss */
+/* line 426, ../scss/index.scss */
 .credited li details summary {
   margin: 5px 0;
 }
-/* line 428, ../scss/index.scss */
+/* line 429, ../scss/index.scss */
 .credited li details > div {
   margin: 5px 18px;
 }
-/* line 431, ../scss/index.scss */
+/* line 432, ../scss/index.scss */
 .credited li details .fa-info {
   margin-right: 1ch;
   cursor: pointer;
 }
-/* line 435, ../scss/index.scss */
+/* line 436, ../scss/index.scss */
 .credited li details a {
   color: var(--shade);
 }
-/* line 438, ../scss/index.scss */
+/* line 439, ../scss/index.scss */
 .credited li details a:hover {
   color: var(--white);
 }
 
-/* line 445, ../scss/index.scss */
+/* line 446, ../scss/index.scss */
 .credited:hover {
   background-color: var(--med);
 }
-/* line 447, ../scss/index.scss */
+/* line 448, ../scss/index.scss */
 .credited:hover .text-med {
   color: var(--white);
   transition: color 400ms;
 }
 
-/* line 453, ../scss/index.scss */
+/* line 454, ../scss/index.scss */
 .credited.flushed-to-grid {
   width: 100% !important;
 }
 
 /* Contact section flexing */
-/* line 461, ../scss/index.scss */
+/* line 462, ../scss/index.scss */
 .contact > .flex > *:nth-child(1) {
   /* Todo: Review; nth-child starts with index 1; It is the nth child of the parent regardless of sibling having the same tag or not */
   flex: 1;
 }
-/* line 465, ../scss/index.scss */
+/* line 466, ../scss/index.scss */
 .contact > .flex > *:nth-child(2) {
   flex: 2;
 }
-/* line 469, ../scss/index.scss */
+/* line 470, ../scss/index.scss */
 .contact > .flex ul li {
   margin-bottom: 10px;
   margin-right: 10px;
 }
-/* line 473, ../scss/index.scss */
+/* line 474, ../scss/index.scss */
 .contact > .flex ul li::marker {
   content: "";
 }
 
 /* Contact section other css */
-/* line 483, ../scss/index.scss */
+/* line 484, ../scss/index.scss */
 .contact .section-title {
   color: var(--med);
 }
-/* line 486, ../scss/index.scss */
+/* line 487, ../scss/index.scss */
 .contact .flex {
   padding-top: 10px;
   background-color: var(--med);
   padding-bottom: 0;
 }
-/* line 491, ../scss/index.scss */
+/* line 492, ../scss/index.scss */
 .contact li {
   display: inline-block;
   border-bottom: 2px solid var(--light);
   transition: border 500ms;
 }
-/* line 495, ../scss/index.scss */
+/* line 496, ../scss/index.scss */
 .contact li:hover {
   border-bottom: 2px solid var(--white);
 }
-/* line 498, ../scss/index.scss */
+/* line 499, ../scss/index.scss */
 .contact li a {
   color: var(--light);
   transition: color 500ms;
   text-decoration: none;
 }
-/* line 502, ../scss/index.scss */
+/* line 503, ../scss/index.scss */
 .contact li a:hover {
   color: var(--white);
 }
 
+/* Toggle description */
+/* line 513, ../scss/index.scss */
+.display-none {
+  display: none;
+}
+
+/* line 517, ../scss/index.scss */
+.overlay-toggle-description {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 3;
+}
+/* line 522, ../scss/index.scss */
+.overlay-toggle-description a {
+  color: purple;
+}
+/* line 524, ../scss/index.scss */
+.overlay-toggle-description a i {
+  cursor: pointer;
+}
+/* line 528, ../scss/index.scss */
+.overlay-toggle-description a:hover {
+  color: red;
+}
+
 /* Last section is completely flushed to the side and bottom edges */
-/* line 512, ../scss/index.scss */
+/* line 536, ../scss/index.scss */
 footer {
   margin: 0 !important;
   /* Override previous margin rules that were more specific because of selectors */
