@@ -15,6 +15,10 @@ Technology used on this portfolio
 - Livereload
 - Balsamiq (Wireframing)
 
+Source files
+---
+Development happens at /dev/src which also has Compass and SASS. When I am ready, I run the npm script build, which compiles the app into /dev/build and also to the root. I can deploy easily by running the npm script deploy.
+
 Wireframing
 ---
 <!-- Todo: Review; Wireframing tool: Balsamiq -->
